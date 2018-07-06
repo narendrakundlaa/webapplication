@@ -1,0 +1,19 @@
+.title {
+	text-align: center;
+	background: green;
+	padding: 5px;
+	color: white;
+	font-size: 20px;
+}
+
+table, thead, th, tr, td {
+	border: 1px solid;
+}
+
+.redbg {
+	background: red;
+}
+
+.bluebg {
+	background: green;
+}

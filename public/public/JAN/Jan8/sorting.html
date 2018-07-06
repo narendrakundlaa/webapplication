@@ -1,0 +1,24 @@
+<html>
+	<head>
+		<title>
+			Assignments
+		</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var a = [20, 30, 12, 67, 19, 2];
+			console.log(a);
+			var temp = 0;
+			for (var i = 0; i < a.length; i++) {
+				for (var j = i+1; j < a.length; j++) {
+					if (a[i] > a[j]) {
+						temp = a[i];
+						a[i] = a[j];
+						a[j] = temp;
+					}
+				}
+			}
+			console.log(a);
+		</script>
+	</body>
+</html>

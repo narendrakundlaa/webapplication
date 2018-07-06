@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<title>
+			Demonstrating javasript arguments keyword
+		</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function addValues() {
+				var result = 0;
+				console.log(arguments);
+				for (var i = 0 ; i < arguments.length; i++) {
+					result += arguments[i];
+				}				
+				return result;
+			}
+
+			var sum1 = addValues(20, 30, 3,23,234,23,234);
+			var sum2 = addValues(24, 30);
+			var sum3 = addValues(20, 60);
+			console.log(sum1);
+			console.log(sum2);
+			console.log(sum3);
+		</script>
+	</body>
+</html>

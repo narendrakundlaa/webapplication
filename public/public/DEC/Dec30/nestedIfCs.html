@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<title>
+			Emp details with nested if
+		</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var gender = 'female';
+			var bsal = 49000;
+			var tsal = 0;
+			var pf = (12 * bsal)/100;
+			var hra = (25 * bsal)/100;
+			var increment = 0;
+			tsal = bsal + pf + hra;
+			if (gender == 'male') {
+				if (tsal < 20000) {
+					increment = (15 * tsal) / 100;
+				} else if (tsal < 30000) {
+					increment = (10 * tsal) / 100;
+				} else {
+					increment = (5 * tsal) / 100
+				}
+			} else {
+				
+			}
+			console.log("u got increment value as " + increment);
+		</script>
+	</body>
+</html>

@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<title>
+			Demonstrating JSON
+		</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+
+			var sdetails = [20,"RAJ", "hyd", [34, 30,44], 0, 0];
+
+			
+			sdetails[4] = sdetails[3][0] + sdetails[3][1] + sdetails[3][2]; // total marks
+			sdetails[5]= sdetails[4]/sdetails[3].length; //AVG
+
+			var empDetails = ["krish", 30,4000];
+			
+			function displaySdetails() {
+				console.log("Student Details");
+				console.log("Sname is " + sdetails[0]);
+				console.log("Location is " + sdetails[2]);
+				console.log("total is " + sdetails[4]);
+				console.log("Avg is " + sdetails[5]);
+
+			}
+			function displayEmpDetails(){
+				console.log("employee details");
+				console.log("Employee name is " + empDetails[0]);
+				console.log("Employee Age is " + empDetails[1]);
+				console.log("Employee Salary is " + empDetails[2]);
+			 }
+			 displaySdetails();
+			 displayEmpDetails();
+		</script>
+	</body>
+</html>

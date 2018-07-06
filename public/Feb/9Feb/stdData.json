@@ -1,0 +1,6 @@
+var data = { 
+		name: 'Raj',
+		age: 40
+	};
+	data = JSON.stringify(data);
+	var res = res.send(data);

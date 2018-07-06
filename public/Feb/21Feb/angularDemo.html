@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<title>
+			Demonstrating module, controller, $scope etc.
+		</title>
+		<script type="text/javascript" src="angular.js"></script>
+		<script type="text/javascript" src="myapp.js"></script>
+	</head>
+	<body ng-app="demoapp" ng-controller="sampleCntrl">
+		<div>
+			The sum of {{a}}  and {{b}}  is <!--<span ng-bind="a+b"></span>--> {{a+b}}......
+		</div>
+		<div class="block">
+			<ul>
+				<li>
+					User name is {{data.name}}
+				</li>
+				<li>
+					User Age is <span ng-bind="data.age"></span>
+				</li>
+				<li>		
+					User gender is {{data.gender}}
+				</li>
+				<li>
+					User Location is <span ng-bind="data.location"></span>
+				</li>
+
+			</ul>
+		</div>
+	</body>
+</html>

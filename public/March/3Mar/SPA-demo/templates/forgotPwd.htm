@@ -1,0 +1,19 @@
+<div class="title">Forgot Pwd Page</div>
+
+<form method="GET" action="" name="mailDetails" novalidate>
+	<ul>
+		<li>
+			Enter ur mail id to which reset pwd will be sent
+			<input type="text" ng-model="details.mail" required name="umail">
+			<input type="button" value="SEND Mail" ng-click="main()">
+			<div ng-show="mailDetails.umail.$dirty && mailDetails.umail.$invalid">error</div>
+			<span class="text" ng-click="openPage('signuped')">New Sign up?</span>
+		</li>
+	</ul>
+</form>
+<style type="text/css">
+	.text{
+		color: blue;
+		cursor: pointer;
+	}
+</style>

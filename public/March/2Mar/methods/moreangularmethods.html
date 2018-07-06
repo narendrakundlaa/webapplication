@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<title>
+			Demonstrating Angular predefined methods.
+		</title>
+		<style type="text/css">
+		
+		</style>
+		<script type="text/javascript" src="../../../angular.js"></script>
+		<script type="text/javascript" src="app.js"></script>
+	</head>
+	<body>
+		
+		<div  ng-controller="demoCntrl" ng-app="demoApp">
+			Enter your name: <input type="text" ng-model="userDetails.uname">
+			<INPUT TYPE="Button" value="COPY" ng-click="copyDetails()">
+			
+			<DIV>MASTER obj - {{userDetails}}</DIV>
+			<DIV>Copied obj - {{tempObj}}</DIV>
+			<div>Result : {{result}}</div>
+			<INPUT TYPE="Button" value="Get Seller Details" ng-click="extendDetails()">
+			<div>Product Details {{productDetails}}</div>
+			<div>Seller Details {{sellerDetails}}</div>
+			<div>Seller name is  : {{sellerDetails.sellername}}</div>
+			<div>Seller name is  : {{sellerDetails.rating}}</div>
+		</div>		
+
+	</body>
+</html>

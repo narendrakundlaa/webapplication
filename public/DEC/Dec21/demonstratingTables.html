@@ -1,0 +1,136 @@
+<html>
+	<head>
+		<title>
+			Demonstrating html tables
+		</title>
+		<style type="text/css">
+			.container {
+				border: 1px solid;
+				height: 400px;
+				width: 600px;
+			}
+			.header {
+				font-weight: bolder;
+			}
+			.cell {
+				border: 1px solid;
+				width: 118px;
+				height: 30px;
+				text-align: center;
+				float: left;
+			}
+			.row {
+				clear: both;
+			}
+			table, td, tr, th {
+				border: 1px solid;
+			}
+		</style>
+	</head>
+	<body>
+		<!--  gfasfa
+		below is the table been added using div tags.
+
+		
+		<div class="container">
+			<div class="header">
+				<div class="cell">SNO.</div>
+				<div class="cell">S Name</div>
+				<div class="cell">S Age.</div>
+				<div class="cell">S Gender</div>
+				<div class="cell"> S location</div>
+			</div>
+			<div class="row">
+				<div class="cell">1</div>
+				<div class="cell">Prasad</div>
+				<div class="cell">50</div>
+				<div class="cell">Maler</div>
+				<div class="cell"> Hyderabad</div>
+			</div>
+			<div class="row">
+				<div class="cell">1</div>
+				<div class="cell">Prasad</div>
+				<div class="cell">50</div>
+				<div class="cell">Maler</div>
+				<div class="cell"> Hyderabad</div>
+			</div>
+			<div class="row">
+				<div class="cell">1</div>
+				<div class="cell">Prasad</div>
+				<div class="cell">50</div>
+				<div class="cell">Maler</div>
+				<div class="cell"> Hyderabad</div>
+			</div>
+			<div class="row">
+				<div class="cell">1</div>
+				<div class="cell">Prasad</div>
+				<div class="cell">50</div>
+				<div class="cell">Maler</div>
+				<div class="cell"> Hyderabad</div>
+			</div>
+			<div class="row">
+				<div class="cell">1</div>
+				<div class="cell">Prasad</div>
+				<div class="cell">50</div>
+				<div class="cell">Maler</div>
+				<div class="cell"> Hyderabad</div>
+			</div>
+		</div>
+		-->
+		<table cellpadding="5" cellspacing="10">
+			<thead>
+				<tr>
+					<th>Sno.</th>
+					<th>Name</th>
+					<th>Age</th>
+					<th>Gender</th>
+					<th>C location</th>
+					<th>P location</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>1</td>
+					<td>Teena</td>
+					<td>20</td>
+					<td>Male</td>
+					<td>Hydeabad</td>
+					<td>Vizag</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>Teena</td>
+					<td>20</td>
+					<td>Male</td>
+					<td>Hydeabad</td>
+					<td>Pune</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>Teena</td>
+					<td>20</td>
+					<td>Male</td>
+					<td colspan="2">Hydeabad</td>
+					
+				</tr>
+				<tr>
+					<td>4</td>
+					<td>Teena</td>
+					<td>20</td>
+					<td>Male</td>
+					<td>Hydeabad</td>
+					<td rowspan="2">Delhi</td>
+				</tr>
+				<tr>
+					<td>5</td>
+					<td>Teena</td>
+					<td>20</td>
+					<td>Male</td>
+					<td>Hydeabad</td>
+					
+				</tr>
+			</tbody>
+		</table>
+
+	</body>
+</html>

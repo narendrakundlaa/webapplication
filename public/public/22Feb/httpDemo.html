@@ -1,0 +1,56 @@
+<html>
+	<head>
+		<title>
+			Demonstrating repeat and http service
+		</title>
+		<script type="text/javascript" src="../angular.js"></script>
+		<script type="text/javascript" src="app.js"></script>
+		<style type="text/css">
+			li {
+				list-style: none;
+				margin: 5px;
+			}
+			.block {
+				background: #ccc;
+				margin: 10px;
+				padding: 10px;
+				border: 1px solid;
+			}
+		</style>
+	</head>
+	<body>
+		<div ng-app="httpapp" ng-controller="httpappCntrl">
+			<div class="block" style="background:{{colors[$index]}}" ng-repeat="item in productData">
+				
+				<ul>
+					<li>
+						{{$index + 1}}
+					</li>
+					<li>
+						Product Name : {{item.name}}
+					</li>
+					<li>
+						Product Manu : {{item.manu}}
+					</li>
+					<li>
+						Product Price : {{item.price}}
+					</li>
+					<li>
+						Product seller : {{item.seller}}
+					</li>
+					<li>
+						<img src="{{item.image}}" />
+					</li>
+					<li>
+						Locations Available {{item.locationsAvailable}}
+						<ul>
+							<li ng-repeat="loc in item.locationsAvailable">
+								{{loc}}
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>

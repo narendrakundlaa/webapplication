@@ -1,0 +1,51 @@
+<html>
+	<head>
+		<title>
+			Demonstrating event handling in jquery.
+		</title>
+		<style type="text/css">
+			#test{
+				cursor: pointer;
+			}
+		</style>
+		<script type="text/javascript" src="jquery.js"></script>
+	</head>
+	<body>
+		<div id="test" title="click here">Hello</div>
+
+		<h1 id="demo"></h1>
+		<input type="button" value="Nare" onclick="nare()">
+		<script type="text/javascript">
+			function showMessage() {
+				document.querySelector('#demo').innerHTML = "Hello click";
+			}
+			$('#test').click(function(){
+				showMessage();
+			})
+			$('#test').mouseover(function(){
+				showMessage();
+			})  
+			/*var eventname = 'click';
+
+
+			$("#test").on(eventname, function(){
+				//showMessage();
+				console.log(eventname);
+				alert('Hello Narendra');
+			}) 
+			//callback method as object below
+			$("#test").on({                 
+				'click': function(){
+					document.querySelector('#demo').innerHTML="click happend";
+				},
+				'mouseover': function(){
+					document.querySelector('#demo').innerHTML="mouse iover happend";
+				}
+			});*/
+			
+			/*function nare(){
+				showMessage();
+			}*/
+		</script>
+	</body>
+</html>

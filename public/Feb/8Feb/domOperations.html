@@ -1,0 +1,50 @@
+<html>
+	<head>
+		<title>
+			Product details using DHTML
+		</title>
+		<link rel="stylesheet" type="text/css" href="app.css">
+		<script type="text/javascript" src="jquery.js"></script>
+		<script type="text/javascript" src="app.js"></script>
+		<style type="text/css">
+			.loadingBlock {
+				position: absolute;
+				top: 30%;
+				left: 40%;
+				display: none;
+
+			}
+			#loading{
+				background:white;
+				width:200px;
+				height: 400px;
+			}
+			.errBlock {
+				color: red;
+				font-weight: bolder;
+				text-align: center;
+				border: 1px solid;
+				margin-top: 20px;
+				padding: 10px;
+				display: none;
+			}
+
+			
+		</style>
+	</head>
+	<body>
+		<header>Ajax Call</header>
+		
+		<div class="loadingBlock">
+			<img id="loading" src="images/tenor2.gif" />
+		</div>
+		<div class="errBlock">
+			Error while communicating with server...
+		</div >
+		<div class="container" id="maincntainer">
+		<input type="button" id="one" value="Get Products" onclick="getDetails()">
+		
+		</div>
+		<!--<footer>@Narendra</footer>-->
+	</body>
+</html>

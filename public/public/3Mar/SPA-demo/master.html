@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<title>
+			Demonstrating angular SPA feature
+		</title>
+		<script type="text/javascript" src="../../angular.js"></script>
+		<script type="text/javascript" src="lib/angularRoute.js"></script>
+		<script type="text/javascript" src="app.js"></script>
+		<link rel="stylesheet" type="text/css" href="app.css">
+	</head>
+	<body>
+		<div ng-app="spaApp" ng-controller="spaCntrl">
+			<div>
+				<header>
+					online shopping appliation
+				</header>
+			</div>
+			<div class="container"> 
+				<div class="leftBlock">
+					Left content
+				</div>
+				<div class="rightBlock" ng-view>
+					Right content
+				</div>
+			</div>
+			<div>
+				<footer>
+					@copyrights 2018
+				</footer>
+			</div>
+		</div>
+	</body>
+</html>

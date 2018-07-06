@@ -1,0 +1,1 @@
+function addVales(a,b) {return a+b;}function mulVales(a,b) {return a*b;}function subVales(a,b) {return a-b;}function divVales(a,b) {return a/b;}

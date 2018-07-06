@@ -1,0 +1,45 @@
+<html>
+	<head>
+		<title>
+			DOM operations using  js
+		</title>
+		<link rel="stylesheet" type="text/css" href="file:///D:/Test/css/mystyles.css">
+		<link rel="stylesheet" type="text/css" href="">
+	</head>
+	<body>
+		<div>
+			<ul>
+				<li>
+					Enter ur name <input type="text" id="uname">
+				</li>
+				<li>
+					Enter ur Age <input type="text" id="uage">
+				</li>
+				<li>
+					Select Country
+					<select id="ucountry">
+						<option value="ind">INDIA</option>
+						<option value="chn">CHINA</option>
+						<option value="jap">JAPAN</option>
+					</select>
+				</li>
+				<li>
+					<input type="button" value="Save Data" onclick="readValues()">
+				</li>
+			</ul>
+		</div>
+		<script type="text/javascript">
+			function readValues() {
+				var userData = {};
+				userData.name = document.getElementById('uname').value;
+				userData.age = document.getElementById('uage').value;
+				console.log(userData);
+
+				var drpDwn = document.getElementById('ucountry');
+				console.log(drpDwn.selectedIndex);
+				console.log(drpDwn.options);
+			}
+			
+		</script>
+	</body>
+</html>

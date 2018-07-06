@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>multi controller</title>
+		<script type="text/javascript" src="angular.js"></script>
+		<script type="text/javascript" src="multiccntrl.js"></script>		
+		<link rel="stylesheet" type="text/css" href="multiccntrl.css">
+	</head>
+	<body ng-app="multiccntrl" ng-controller="myCntrl">
+		<div class="main">
+			<div class="body" ng-controller="Dept">
+				<h3>Deposit Session</h3>
+				Deposit Amount : <input type="text" ng-model="DeptAmt">
+				<input type="button" value="Deposit" ng-click="Deposit()">
+				<div class="Tbal">Main Balance Available : {{mainBalance}}</div>
+			</div>
+			<div class="body" ng-controller="WIthdrwnCntrl">
+				<h3>Withdrawn Session</h3>
+				withdrawn Amount : <input type="text" ng-model="WIthdrwn">
+				<input type="button" value="withDrawn" ng-click="WIthdrwnMoney()">
+				<div class="Tbal">Total Balance Available : {{withDrawnAmt}}</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,41 @@
+.loadingMsg{
+	position: absolute;
+	top: 25%;
+	margin-left: 35%;
+}
+.error{
+	color: red;
+	text-align: center;
+	margin: 20px;
+	font-size: 20px;
+}
+.bolck{
+	width: 400px;
+	margin: 10px;
+	padding: 10px;			
+	background: #ccc;
+	border: 1px solid green;
+	float: left;
+}
+
+
+#loadingImg{
+	width:150px;
+	height:150px;
+}
+.block{
+			width: 400px;
+			margin: 10px;
+			padding: 10px;			
+			background: #ccc;
+			border: 1px solid green;
+			float: left;
+		}
+		li{
+			list-style: none;
+
+		}
+		img{
+			width: 300px;
+			height: 200px;
+		}

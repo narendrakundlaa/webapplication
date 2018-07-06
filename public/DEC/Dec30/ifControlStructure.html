@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<title>
+			Demonstrating if control structure.
+		</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var sname = "raj";
+			var sage = 30;
+			var gender = 'Male';
+			var m1 = 40, m2 = 50, m3 = 60, m4 = 70;
+			var total = m1 + m2 + m3 + m4;
+			var avg = total/4;
+			console.log("-----Studnet details---");
+			console.log("Student name is " + sname);
+			console.log("Student age is " + sage);
+			console.log("Student gender is " + gender);
+			console.log("Student Avg is " + avg);
+			if (m1 >= 35 && m2 >=35 && m3 >= 35) {
+				if (avg >= 40) {
+					console.log("Student is passed");
+					if (avg >= 90) {
+						console.log("Got Distinction")
+					} else if(avg >= 60) {
+						console.log("Got First class");
+					} else {
+						console.log("Got Second class")
+					}
+				} else {
+					console.log("Student got Failed");
+				}
+			} else {
+				console.log("u have a surprise");
+			}
+		</script>
+	</body>
+</html>

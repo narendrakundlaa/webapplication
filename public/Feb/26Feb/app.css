@@ -1,0 +1,42 @@
+.mainTitle {
+	text-align: center;
+	font-size: 20px;
+	font-weight: bolder;
+	border: 1px solid;
+	width: 200px;
+	margin: 5px auto;
+	background: yellow;
+	padding: 5px;
+}
+
+.sTitle {
+	font-weight: bolder;
+	text-align: center;
+	color: blue;
+}
+
+.block {
+	border: 1px solid;
+	background: #ccc;
+	margin: 5px;
+	padding: 5px;
+}
+
+.body {
+	text-align: center;
+	margin: 10px;
+}
+
+.tbalanceBlck {
+	text-align: right;
+	color: green;
+}
+
+.succsBlck {
+	color: green;
+	text-align: center;
+}
+.invalidError,.errorBlck{
+	color: red;
+	text-align: center;
+}

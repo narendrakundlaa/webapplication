@@ -1,0 +1,52 @@
+<html>
+	<head>
+		<title>
+			Jquery Animation effects using show/hide/toggle methods.
+		</title>
+		<script type="text/javascript" src="jquery.js"></script>
+		<style type="text/css">
+			.block {
+				border: 2px solid;
+				background: Green;
+				width: 150px;
+				height: 160px;
+				text-align: center;
+				margin: 30px;
+				padding: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<input type="button" value="SHOW" onclick='applyStyle("show")'>
+			<input type="button" value="HIDE" onclick='applyStyle("hide")'>
+			<input type="button" value="toggle" onclick='applyStyle("tog")'>
+		</div>
+		<div class="block">
+			Content
+		</div>		
+		<script type="text/javascript">
+			function applyStyle(type) {
+				switch(type) {
+					case 'show':
+						$(".block").show(3000, function(){
+						});
+						break;
+					case 'tog':
+						$(".block").toggle(1000);
+						break;
+					case 'hide':
+						//$(".block").hide(5000);
+						var width = 150;
+						var height = 160;
+						setInterval(function(){
+							width -= 5;
+							height -= 5;
+							$('.block').css({width: width + 'px',				height: height + 'px'});
+						}, 1000);						
+						break;
+				}
+			}
+		</script>
+	</body>
+</html>

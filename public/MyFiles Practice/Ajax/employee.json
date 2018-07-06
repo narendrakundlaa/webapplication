@@ -1,0 +1,20 @@
+{
+	"employeeDetails" : [
+		{
+			"name" : "narendra",
+			"age" : "28",
+			"place" : "egrp"
+		},
+		{
+			"name" : "narendra",
+			"age" : "28",
+			"place" : "egrp"
+		},
+		{
+			"name" : "narendra",
+			"age" : "28",
+			"place" : "egrp"
+		}
+
+	]
+}

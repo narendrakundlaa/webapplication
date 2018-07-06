@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Validate data</title>
+	<link rel="stylesheet" type="text/css" href="validateCSS.css">
+	<script type="text/javascript" src="validateJS.js"></script>
+</head>
+<body>
+<div class="container">
+	<table>
+		<tr>
+			<th>
+				Enter First number:
+				<td>
+					<input type="text" id="fval" onkeypress="return ValidateData(event)">
+				</td>
+			</th>
+		</tr>
+		<tr>
+			<th>
+				Enter Second number:<td><input type="text" id="sval" onkeypress="return ValidateData(event)"></td>
+			</th>
+		</tr>		
+	</table>
+	<input type="button" value="Dosum" onclick="doSum()">
+	<p id="resultcntr">
+		The sum of value is : <span id="resultBlck"></span></p>
+</div>
+</body>
+</html>

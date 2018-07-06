@@ -1,0 +1,68 @@
+<html>
+	<head>
+		<title>
+			Demonstrating Inheritance btwn A Dynamic Object and Static object.
+		</title>
+		<link rel="stylesheet" type="text/css" href="app.css">
+		<script type="text/javascript" src="app.js"></script>
+	</head>
+	<body>
+		<div class="block">
+			<div class="title">
+				Student Registration Form
+			</div>
+			<div>
+				<ul>
+					<li>
+						<div class="label">
+							Enter student Name:
+						</div> 
+						<div  class="inpElmtn">
+							<input type="text" id="sname">
+						</div>
+					</li>
+					<li>
+						<div class="label">
+							Enter student Age: 
+						</div>
+						<div class="inpElmtn">
+							<input type="text" id="sAge">
+						</div>
+					</li>
+					<li>
+						<div class="label">Address: </div>
+						<div class="inpElmtn">
+							<select id="scountry">
+								<option>China</option>
+								<option>India</option>
+								<option>Japan</option>
+							</select>
+						</div>
+					</li>
+					<li>
+						<input type="button" value="Register" onclick="registerStdDetails()">
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="showBlock block">
+			<div class="title">
+				Student Details
+			</div>
+			<div id="detailsContainer">
+				<ul>
+					<li>
+						Student Name is : <span id="uname"></span>
+					</li>
+					<li>
+						Student Age is : <span id="uage"></span>
+					</li>
+					<li>
+						Student country is : <span id="ucntry"></span>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>

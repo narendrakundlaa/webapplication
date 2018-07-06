@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>second</title>
+		<style type="text/css">
+			span{
+				color: green;
+			}
+			li{
+				list-style: none;
+			}
+		</style>
+		<script type="text/javascript" src="angular.js"></script>
+		<script type="text/javascript" src="second.js"></script>
+	</head>
+	<body>
+		<div ng-app="main" ng-controller="cntrlName">
+			<ul>
+				<li>
+					Enter Your Name : <input type="text" ng-model="studentDetails.name">
+				</li>
+				<li>
+					Enter Your village : <input type="text" ng-model="studentDetails.village">
+				</li>
+				<li>
+					Enter Your state : <input type="text" ng-model="studentDetails.state">
+				</li>
+				<li>
+					Enter Your pin code : <input type="text" ng-model="studentDetails.pin">
+				</li>
+			</ul>
+			{{studentDetails}}
+			<ul>
+				<li>Student Name is <span>{{studentDetails.name}}</span></li>
+				<li>Student village is <span>{{studentDetails.village}}</span></li>
+				<li>Student state is <span>{{studentDetails.state}}</span></li>
+				<li>Student pincode is <span>{{studentDetails.pin}}</span></li>
+			</ul>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,25 @@
+Traversing Ancestors
+
+element.parent() - REturns the immediate parent of an element
+element.parents() - REturns the list of all the parents of an element until html tag
+
+element.parentsUntil("pattern") - Returns the list of all the parents until a parent match with given pattern.
+
+Decendents:
+
+ 	element.children() - REturns the list of all the childrens of an element
+ 	.find('pattern') - REturns the list of all the childrens matching the provided pattern
+
+ Siblings:
+ 	element.siblings() - Returns the list of all the siblings of an element
+ 	element.next() - REturns the very next sibling
+ 	element.prev() - REturns the very previous sibling
+ 	element.nextAll() - Returns all the next sibling elements
+
+ 	element.prevAll() - Returns all the previous sibling elements
+ 	element.nextUntil('pattern') - REturns the next siblings until it reaches to specific pattern
+
+ 	element.prevUntil('pattern') - REturns the prev siblings until it reaches to specific pattern
+
+ 	
+

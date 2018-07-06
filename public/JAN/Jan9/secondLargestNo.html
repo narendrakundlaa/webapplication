@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<title>
+			To get the second largest no. in an array
+		</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function checkArmStrongNo(n){
+				var armNo = 0;
+				var temp = n;
+				while (n > 0) {
+					var rem = n%10;
+					armNo = armNo + (rem * rem * rem);
+					n = n/10;
+					n = parseInt(n);
+				}
+				if (armNo == temp) {
+					return temp + " Is an armstrng no.";
+				} else {
+					return temp + " Is NOT armstrng no.";
+				}
+			}
+			
+
+			var a = [2323, 342, 234,153,1234];
+			for (var i = 0 ; i < a.length; i++) {
+				var msg = checkArmStrongNo(a[i]);
+				console.log(msg); 
+			}
+		</script>
+	</body>
+</html>

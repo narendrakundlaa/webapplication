@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<title>
+			Creating Custom Directives.
+		</title>
+		<script type="text/javascript" src="../../../angular.js"></script>
+		<script type="text/javascript" src="app.js"></script>
+		<style type="text/css">
+			li{
+			list-style : none;
+			}
+			.block{
+				border: 1px solid;
+				margin: 10px;
+				padding: 10px;
+				background: #ccc;
+				width: 220px;
+				height: 150px;
+				float:left;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div ng-app="custDirApp" ng-controller="custDirCntrl">
+
+			<div my-view color="green" id="contaier" showSal="Nare" userdata="details1">
+				<!-- here showsal is create an attribute and apply or inject salary details through js code , userdata is userdefind-->
+			</div>
+
+			<my-view color="yellow" id="TEST" showSal="egrp" userdata="details2"></my-view>
+
+			<my-view color="pink" id="TEST" showSal="Chintu" userdata="details3"></my-view>
+			
+			<my-view color="lightblue" id="TEST" showSal="Siromany" userdata="details4"></my-view>
+			
+		</div>
+	</body>
+</html>

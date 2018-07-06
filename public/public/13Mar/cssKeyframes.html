@@ -1,0 +1,58 @@
+<html>
+	<head>
+		<title>
+			Demonstrating Keyframes
+		</title>
+		<style type="text/css">
+			.block {
+				border: 1px solid;
+				background: grey;
+				height: 100px;
+				width: 180px;
+				position: absolute;
+				text-align: center;
+				left: 190px;
+				top: 500px;
+				animation: mystyle 3s;
+			}
+
+			@keyframes mystyle {
+				1% {
+					background: blue;
+					border: 3px solid;
+				}
+				15% {
+					background: pink;
+					right: 100px;
+					bottom: 0;
+				}
+				20% {
+					top: 10px;
+					background: url("images/bg1.png");
+					
+				}
+				40% {
+					bottom: 90px;
+					right: 20px;
+					background: red;
+
+				}
+				60% {
+					bottom: 99px;
+					background: green;
+					left: 20px;
+				}
+				90% {
+					background: yellow;
+					left: 90px;
+					top: 30px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="block">
+			CONTNT
+		</div>
+	</body>
+</html>

@@ -1,0 +1,49 @@
+<html>
+	<head>
+		<title>
+			Jquery Animation effects using fade/in/out.
+		</title>
+		<script type="text/javascript" src="../jquery.js"></script>
+		<style type="text/css">
+			.block {
+				border: 2px solid;
+				background: Green;
+				width: 150px;
+				height: 160px;
+				text-align: center;
+				margin: 30px;
+				padding: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<input type="button" value="Fade IN" onclick='applyStyle("in")'>
+			<input type="button" value="FADE OUT" onclick='applyStyle("out")'>
+			<input type="button" value="toggle fade" onclick='applyStyle("tog")'>
+			<input type="button" value="fade until" onclick='applyStyle("until")'>
+		</div>
+		<div class="block">
+			Content
+		</div>		
+		<script type="text/javascript">
+			function applyStyle(type) {
+				switch(type) {
+					case 'in':
+						$(".block").fadeIn(3000, function(){
+						});
+						break;
+					case 'out':
+						$(".block").fadeOut(1000);
+						break;
+					case 'tog':
+						$(".block").fadeToggle(1000);		
+						break;
+					case 'until':
+						$(".block").fadeTo(1000, 0.3);		
+						break;
+				}
+			}
+		</script>
+	</body>
+</html>

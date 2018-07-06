@@ -1,0 +1,51 @@
+<html>
+	<head>
+		<title>Demonstrating Switch cse directives</title>
+		<script type="text/javascript" src="../../angular.js"></script>
+		<script type="text/javascript" src="app.js"></script>
+		<style type="text/css">
+			.tab {
+				width: 120px;
+				text-align: center;
+				border: 1px solid;
+				padding: 5px;
+				float: left;
+				background: #ccc;
+			}
+			.tab:hover {
+				cursor: pointer;
+				background: #ddd;
+				color: #fff;
+				font-weight: bolder;
+			}
+			.tabContainer {
+				border: 2px solid;
+				text-align: center;
+				padding: 30px;
+				margin: 5px;
+				clear: both;
+			}
+		</style>
+	</head>
+	<body ng-app="switchApp" ng-controller="switchAppCntrl">
+	{{name}}	
+		<div class="tab" ng-click="selectTab('tab1')">TAB1</div>
+		<div class="tab" ng-click="selectTab('tab2')">TAB2</div>
+		<div class="tab" ng-click="selectTab('tab3')">TAB3</div>
+		<div class="tab" ng-click="selectTab('tab4')">TAB4</div>
+		<div ng-switch="selectedTab">
+			<div class="tabContainer" ng-switch-default>
+				TAB1 content
+			</div>
+			<div class="tabContainer" ng-switch-when="tab2">
+				TAB2 content
+			</div>
+			<div class="tabContainer" ng-switch-when="tab3">
+				TAB3 content
+			</div>
+			<div class="tabContainer" ng-switch-when="tab4">
+				TAB4 content
+			</div>
+		</div>
+	</body>
+</html>

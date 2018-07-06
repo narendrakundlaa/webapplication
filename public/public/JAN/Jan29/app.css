@@ -1,0 +1,31 @@
+.block {
+	border: 1px solid;
+	background: #ccc;
+	margin: 10px auto;
+	width: 600px;
+	max-height: 400px;
+	overflow: auto;
+	padding: 20px;
+}
+.title {
+	text-align: center;
+	margin: 5px;
+	font-weight: bolder;
+	color: green;
+}
+.label, .inpElmtn {
+	float: left;
+	margin: 5px;
+}
+.label {
+	width: 150px;
+	
+}
+
+li {
+	list-style: none;clear: both;
+	margin: 5px;
+}
+.showBlock {
+	display: none;
+}

@@ -1,0 +1,46 @@
+.top, .btm, .cntnr {
+	position: absolute;
+	border: 1px solid;
+	padding: 5px;
+	text-align: center;
+	left: 0;
+	right: 0;
+}
+.top {
+	font-size: 20px;
+	top: 0;
+}
+.btm {
+	font-size: 10px;
+	bottom: 0;
+	clear: both;
+}
+
+.cntnr {
+	top: 40px;
+	bottom: 30px;
+	background: #ccc;
+}
+
+.lblock, .rblock {
+	border: 1px solid;
+	height: 560px;
+	float: left;
+	margin: 5px;
+	background: #fff;
+}
+.lblock {
+	width: 20%;
+}
+.rblock {
+	width: 77%;
+	overflow: auto;
+}
+
+.block {
+	border: 1px solid;
+	margin: 5px;
+	height: 200px;
+	padding: 10px;
+	text-align: center;
+}

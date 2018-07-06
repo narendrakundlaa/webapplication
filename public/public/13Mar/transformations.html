@@ -1,0 +1,40 @@
+<html>
+	<head>
+		<title>
+			Demonstrating CSS3 Transformations.
+		</title>
+		<script type="text/javascript" src="../jquery.js"></script>
+		<style type="text/css">
+			.block {
+				width: 300px;
+				height: 80px;
+				border: 1px solid;
+				background: #ccc;
+				margin: 50px auto;
+				text-align: center;
+				
+			}	
+			.block:hover  {
+				/*transform: translate(200px ,300px);*/
+				transform: scale(2,3);
+			}
+		</style>
+	</head>
+	<body>
+		
+		<div class="block">
+			CONTENT
+		</div>
+		<script type="text/javascript">
+			var degree = 0;
+			setInterval(function(){
+				degree += 2;
+				if (degree == 360) {
+					degree = 1;
+				}
+				$(".block").css("transform", "rotateY(" + degree + "deg)")
+				$(".block").css("background", "green");
+			}, 100); 
+		</script>
+	</body>
+</html>

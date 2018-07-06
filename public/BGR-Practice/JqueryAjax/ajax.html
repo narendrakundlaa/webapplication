@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="../jQuery.js"></script>
+	<style type="text/css">
+		.block{
+			width: 200px;
+			height:200px;
+			border: 1px solid;
+		}
+	</style>
+</head>
+<body>
+<h1>Ajax Communication in JS</h1>
+<div class="mainCntr"></div>
+<input type="button" value="getData" onclick="getData()">
+<script type="text/javascript">
+	function getData(){
+		$('.mainCntr').html('');
+		var urlfile = "file.json";
+		$.ajax({
+			url : urlfile,
+			method: 'GET',
+			dataType : 'JSON',
+			success: function(response){
+				console.log(response);
+				var getDatafromajax = response.data;
+				showDetails(getDatafromajax);				
+			},
+			error: function(error){
+				console.log(error);
+			}
+		});	
+	}
+		function showDetails(getDatafromajax){
+			for(var i=0; i<getDatafromajax.length; i++){
+				displayInfo(getDatafromajax[i]);
+			}
+		}	
+	
+	function displayInfo(nare){
+			var mainBlck = $('<div></div>').addClass('block');
+			var ultag = $('<ul></ul>');
+			var li1 = $('<li></li>').html('Name is ' + nare.name);
+			ultag.append(li1);
+			var li2 = $('<li></li>').html('Age is ' + nare.age);
+			ultag.append(li2);
+			var li3 = $('<li></li>').html('Place is ' + nare.place);
+			ultag.append(li3);
+			mainBlck.append(ultag);
+			$('.mainCntr').append(mainBlck);
+		}
+		
+
+</script>
+</body>
+</html>

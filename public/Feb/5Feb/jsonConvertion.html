@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<title>
+			Converting JSON To String and string back to obj.
+		</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var data = {
+				name: 'Raj',
+				id: 234234,
+				age: 50,
+				address: {
+					loc: 'hyd',
+					pin: 3242234
+				}
+			};
+
+			console.log(data);
+			console.log(typeof(data));
+			var strobj = JSON.stringify(data);
+			console.log(strobj);
+			console.log(typeof(strobj));
+			console.log(JSON.parse(strobj));
+		</script>
+	</body>
+</html>

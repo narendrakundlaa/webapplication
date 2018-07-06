@@ -1,0 +1,8 @@
+//it is just like function reusablity in javascript 
+
+function showMessage() {
+	console.log("hello ");
+	console.llog("Very goodmorning every one");
+}
+
+showMessage();

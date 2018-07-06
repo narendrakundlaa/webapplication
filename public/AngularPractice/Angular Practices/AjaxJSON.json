@@ -1,0 +1,44 @@
+{
+	"Bikes" : [
+	{
+		"name" : "Pulsar",
+		"price" : "86500",
+		"color" : "red"
+	},
+	{
+		"name" : "Pulsar",
+		"price" : "86500",
+		"color" : "red"
+	},
+	{
+		"name" : "Pulsar",
+		"price" : "86500",
+		"color" : "red"
+	},
+	{
+		"name" : "Pulsar",
+		"price" : "86500",
+		"color" : "red"
+	},
+	{
+		"name" : "Pulsar",
+		"price" : "86500",
+		"color" : "red"
+	},
+	{
+		"name" : "Pulsar",
+		"price" : "86500",
+		"color" : "red"
+	},
+	{
+		"name" : "Pulsar",
+		"price" : "86500",
+		"color" : "red"
+	},
+	{
+		"name" : "Pulsar",
+		"price" : "86500",
+		"color" : "red"
+	}
+	]
+}

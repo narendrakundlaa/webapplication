@@ -1,0 +1,60 @@
+<html>
+	<head>
+		<title>
+			Demo of pseudoClasses and Elements.
+		</title>
+		<style type="text/css">
+			.link:hover {
+				color: blue;
+				text-decoration: underline;
+				cursor: pointer;
+			}
+			a:focus {
+				background: yellow;
+			}
+			a:active {_
+				background: red;
+			}
+			span:first-child {
+				background: green;
+			}
+			span:nth-child(3) {
+				background: green;
+			}
+			p::after {
+				content: "Continue reading @ main page...";
+				background: yellow;
+				text-decoration: underline;
+			}
+			.special::before {
+				content: "ITS special news";
+				color: red;
+			}
+			p::first-letter {
+				font-size: 30px;
+				background: green;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="link">
+			Link Content
+		</div>
+		<a href="http://www.google.com">GOOGLE</a>
+		<a href="http://www.amazon.in">AMAZON</a>
+		<a href="http://www.flipkart.com">FLIPKART</a>
+		<a href="http://www.ebay.com">EBAY</a>
+		<span>TESTING</span>
+		<div>
+			<span>Item1</span>
+			<span>Item2</span>
+			<span>Item3</span>
+			<span>Item4</span>
+		</div>
+		<p>
+			News about the news been happend today in hyderabad News about the news been happend today in hyderabad News about the news been happend today in hyderabad News about the news been happend today in hyderabad News about the news been happend today in hyderabad News about the news been happend today in hyderabad News about the news been happend today in hyderabad</p>
+		<p class="special">News about the news been happend today in hyderabad</p>
+		<p>News about the news been happend today in hyderabad</p>
+		<p class="special">News about the news been happend today in hyderabad</p>
+	</body>
+</html>

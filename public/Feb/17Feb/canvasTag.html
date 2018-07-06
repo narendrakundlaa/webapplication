@@ -1,0 +1,50 @@
+<html>
+	<head>
+		<title>
+			Canvas Tag Demonstration
+		</title>
+		<style type="text/css">
+			#container {
+				width: 600px;
+				height: 500px;
+				border: 2px solid;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			Working on methods to draw objects on canvas container
+		</div>
+		<canvas id="container"></canvas>
+		<script type="text/javascript">
+			var colors = ['Red', 'green', 'blue', 'yellow'];
+			var ele = document.querySelector("#container");
+			var ctx = ele.getContext('2d');
+			var x = 0;
+			var y = 0;
+			var i = 0;
+			setInterval(function(){
+				ctx.fillStyle = colors[i];
+				i++;
+				if (i > 3) {
+					i = 0;
+				}
+				ctx.fillRect(x, y, 10, 50);
+				x+= 5;
+				y+= 5;
+			}, 1000);
+			ctx.fillStyle = "red";
+			ctx.moveTo(10, 10);
+			ctx.lineTo(50 ,50);
+			ctx.stroke(); 
+
+
+ctx.beginPath();
+ctx.arc(95, 50, 40, 0, 2*Math.PI);
+ctx.stroke();
+ctx.font = '30px Arial';
+ctx.fillText("Hello all", 20, 40);
+ctx.strokeText("Hello all", 50, 90);
+		</script>
+	</body>
+</html>

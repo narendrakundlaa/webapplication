@@ -1,0 +1,45 @@
+<html>
+	<head>
+		<title>
+			Showing product details using jquery load template
+		</title>
+		<style type="text/css">
+			.load{
+				display: none;
+				color: green;
+				position: absolute;
+				left: 25%;
+				top: 15%;
+				font-size: 20px;
+			}
+		</style>
+		<link rel="stylesheet" type="text/css" href="app.css">
+		<script type="text/javascript" src="jquery-3.3.1.js"></script>
+		<script type="text/javascript" src="jquery.loadTemplate-1.4.4.min.js"></script>
+		<script type="text/javascript" src="app.js"></script>
+	</head>
+	<body>
+		<div class="container" id="maincntainer"></div>
+		<div class="load">Loading Please wait....</div>
+		<input type="button" value="Get Products" onclick="showDetails()">
+		<!-- just empty calss/id in script tag-->
+		<script class="productTmplt">
+			<div class="block">
+				<ul>
+					<li>
+						Product Name: <span data-content="price"></span>
+					</li>
+					<li>
+						Product Price:  <span data-content="name"></span>
+					</li>
+					<li>
+						Product Manufacturer: <span data-content="manu"></span>
+					</li>
+					<li>
+						<img data-src="imageUrl"/>
+					</li>
+				</ul>
+			</div>
+		</script>
+	</body>
+</html>

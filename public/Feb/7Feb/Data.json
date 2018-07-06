@@ -1,0 +1,28 @@
+{ 
+	"productData":	[
+		{
+			"name": "Narendra",
+			"price": "$3550",
+			"manu": "Samsung",
+			"imageUrl": "images/laptop.png"
+		},
+		{
+			"name": "Laptop",
+			"price": "$300",
+			"manu": "Samsung",
+			"imageUrl": "images/laptop.png"
+		},
+		{
+			"name": "Laptop",
+			"price": "$300",
+			"manu": "Samsung",
+			"imageUrl": "images/laptop.png"
+		},
+		{
+			"name": "Laptop",
+			"price": "$300",
+			"manu": "Samsung",
+			"imageUrl": "images/laptop.png"
+		}
+	]
+}

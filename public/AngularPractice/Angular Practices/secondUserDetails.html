@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>User details</title>
+		<script type="text/javascript" src="angular.js"></script>
+		<script type="text/javascript" src="Application.js"></script>
+	</head>
+	<body ng-app="employeeDtls" ng-controller="employeeCntrl">
+		<h1>Employee Details</h1>
+		<div>
+			<ul>
+				<li>
+					Enter your Name : <input type="text" ng-model="employeeInfo.Name">
+				</li>
+				<li>
+					Enter your Gender : <input type="text" ng-model="employeeInfo.Gender">
+				</li>
+				<li>
+					Enter your Desig : <input type="text" ng-model="employeeInfo.Desig">
+				</li>
+				<li>
+					Enter your ID : <input type="text" ng-model="employeeInfo.ID">
+				</li>
+			</ul>			
+		</div>
+		<div>
+			Ur Name is : {{employeeInfo.Name}}
+		</div>
+		<div>
+			Ur Gender is :<span ng-bind="employeeInfo.Gender"></span>
+		</div>
+		{{employeeInfo}}
+	</body>
+</html>

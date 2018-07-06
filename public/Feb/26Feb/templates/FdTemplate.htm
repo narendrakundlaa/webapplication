@@ -1,0 +1,17 @@
+<div class="block" ng-controller="FDCntrl">
+	<div class="sTitle">
+		Fixed Deposit Block
+	</div>
+	<div class="tbalanceBlck">
+		Total Balance: ${{totalBalance}}
+	</div>
+	<div class="body">Enter the amount to be FD: 		
+		<input type="number" ng-model="fdAmt">
+		<input type="button" value="FD" ng-click="doFd()">
+	</div>
+	<div class="succsBlck" ng-show="showfdSucss">
+		Fixed Deposit Been Successfly completed : 
+		<span style="color: blue; font-size:20px"> ${{fdAmt}} rupee</span>
+			
+	</div>
+</div>

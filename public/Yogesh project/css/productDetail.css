@@ -1,0 +1,171 @@
+.header {
+		height: 111px;
+		width: inherit;
+		background-color: black;
+		position: relative;
+         color: white;
+}
+
+.headerImage {
+		height: 100px;
+		width: 100px;
+		margin-top: 5px;
+		margin-left: 5px;
+}
+.headerName {
+	color: greenyellow;
+	margin-top:  -87px;
+	margin-right: 667px;
+	font-size: 39px;
+	text-align: center;
+	font-weight: bold;
+}
+.headerStatement {
+		color: white;
+		text-align:center;
+		font-weight: bolder;
+		font-style: italic;
+		font-size: 30px;
+		margin-left: 140px;
+		position: relative;
+		bottom: 17px;
+}
+.menu {
+      height: auto;
+      width: 240px;
+      /*border: 2px solid;*/
+      
+}
+.subMenu {
+      height: 10px;
+      width: 216px;
+      text-align: center;
+      border: 2px solid;
+      padding-bottom:30px;
+      padding-top: 10px;
+      margin-top: 14px;
+      background-color: aqua;
+      color: blue;
+      font-weight: bold;
+}
+li {
+	list-style: none;
+	margin: 5px;
+	padding: 5px;
+}
+ul {
+	width: 200px;
+   height: 356px;
+	/*background: #fff;*/
+	padding: 20px;
+    cursor:pointer;
+}
+.block {
+     height:500px; 
+	/*backgroun;d: #ccc;*/
+	/*margin: 5px;*/
+	/*padding: 10px;*/
+	width: 240px;
+	float: left;
+}
+#productContainer{
+  position: absolute;
+  left:330px;
+   top: 136px;
+   right: 9px;
+}
+b {
+   color: darkmagenta;
+}
+.popUp{
+   height: auto;
+   width: 550px;
+   background-color: whitesmoke;
+   border: 2px solid;
+   position: absolute;
+   left: 400px;
+   top:200px;
+   text-align:justify;
+   padding-bottom: 10px;
+   padding-left:30px;
+   padding-right: 30px;
+}
+.clsButton{
+   position: absolute;
+   left: 587px;
+   top: -2px;
+   height:25px;
+   width: 25px;
+   
+}
+.btn {
+   height: 30px;
+   width: 90px;
+}
+#bblc01 {
+  position: relative;
+   left: 2px;
+}
+#bblc02 {
+  position: relative;
+   left: 30px;
+   top: 0px;
+}
+#h1{
+   position:absolute;
+      top:42px;
+      right:30px;
+      color:white;
+      font-size: 20px;
+}
+#addedToCart{
+   position: relative;
+   left: 3px;
+   top:-40px;
+   height: 30px;
+   width: 90px;
+}
+.locB {
+    position: absolute;
+  left:0px;
+   top: 0px;
+   right: 0px;
+   bottom: 0px;
+   height:1127px;
+   width: inherit;
+}
+#container02{
+   height:inherit;
+   width: inherit;
+}
+#proceed{
+   position: relative;
+   left: 1230px;
+   bottom: 20px;
+   display: none;
+}
+#bblc03 {
+  /*position:f
+   bottom: 5px;
+   left: 2px;*/
+   padding: 10px;
+   display: none;
+}
+#prc{
+   display: none;
+   color: blue;
+   font-weight: bolder;
+}
+.popUp1 {
+   height: auto;
+   width: 550px;
+   background-color: whitesmoke;
+   border: 2px solid;
+   position: absolute;
+   left: 400px;
+   top:200px;
+   text-align:center;
+   padding-bottom: 10px;
+   padding-left:30px;
+   padding-right: 30px;
+}

@@ -1,0 +1,72 @@
+<html>
+	<head>
+		<title>
+			Inheritance using Prototype
+		</title>
+		<link rel="stylesheet" type="text/css" href="app.css">
+		<script type="text/javascript" src="app.js"></script>
+	</head>
+	<body>
+		<div class="title main">
+			Sports Registration Page
+		</div>
+		<div class="container">
+			<div class="title">Add School Details</div>
+			<ul>
+				<li>
+					School Id: <input type="text" id="sclId">
+				</li>
+				<li>
+					Name: <input type="text" id="sclName">
+				</li>
+				<li>
+					Location: <input type="text" id="sclLoc">
+				</li>
+			</ul>
+		</div>
+		<div class="container">
+			<div class="title">Add Student Details</div>
+			<ul>
+				<li>
+					Student Name: <input type="text" id="sName">
+				</li>
+				<li>
+					Age: <input type="text" id="sAge">
+				</li>
+				<li>
+					Select Sport: 
+					<select id="sSport">
+						<option>Cricket</option>
+						<option>Tennis</option>
+						<option>Chess</option>
+					</select>
+				</li>
+			</ul>
+		</div>
+		<div>
+			<input type="Button" value="Register" onclick="readDetails()">
+		</div>
+		<div class="dContainer">
+			<ul>
+				<li>
+					School Name: <span id="schlName"></span>
+				</li>
+				<li>
+					School Id: <span id="schlId"></span>
+				</li>
+				<li>
+					School Location: <span id="schlLoc"></span>
+				</li>
+				<li>
+					STudent Age: <span id="stdage"></span>
+				</li>
+				<li>
+					Selected Sport: <span id="stdSport"></span>
+				</li>
+				<li>
+					STudent Name: <span id="stdname"></span>
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>

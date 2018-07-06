@@ -1,0 +1,82 @@
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.text {
+			color: green;
+		}
+		.text1 {
+			color: pink;
+		}
+		.text2 {
+			color: red;
+		}
+		.text3 {
+			color: blue;
+		}
+		.text4 {
+			color: Yellow;
+		}
+	</style>
+</head>
+<body>
+	<div id="dateCntainer"></div>
+	<div class="text">
+		<span class="text1">I</span>
+		<span class="text2">N</span>
+		<span class="text3">D</span>
+		<span class="text4">I</span>
+		<span class="text5">A</span>
+	</div>
+	<script type="text/javascript">
+
+var data = {
+	method1: function() {
+		
+	},
+	sample: {
+		values: [34, 56, 6]
+
+	},
+	sample2: {
+		values2: [3, 5, 6]
+	},
+	actual: {
+		temp:  function(){
+			var t = data.sample.values;
+			for (var i = 0 ; i < data.sample2.values2.length; i++) {
+				t.push(data.sample2.values2[i]);
+			}
+			return t;
+		}
+	}
+}
+
+
+
+console.log(data);
+console.log(data.actual.temp());
+
+
+	function showDate() {
+		var date = new Date();
+		document.querySelector("#dateCntainer").innerHTML = date;
+
+	}
+	setInterval(function(){
+		showDate();
+	}, 1000);
+	
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

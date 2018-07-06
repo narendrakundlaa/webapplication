@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>second</title>
+		<style type="text/css">
+			span{
+				color: green;
+			}
+			li{
+				list-style: none;
+			}
+		</style>
+		<script type="text/javascript" src="angular.js"></script>
+		<script type="text/javascript" src="second.js"></script>
+	</head>
+	<body>
+		<div ng-app="main" ng-controller="cntrlName">
+			<ul>
+				<li>Student Name is <span>{{studentDetails.name}}</span></li>
+				<li>Student village is <span>{{studentDetails.village}}</span></li>
+				<li>Student state is <span>{{studentDetails.state}}</span></li>
+				<li>Student pincode is <span>{{studentDetails.pin}}</span></li>
+			</ul>
+		</div>
+	</body>
+</html>

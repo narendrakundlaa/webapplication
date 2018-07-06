@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<title>
+			Demonstrating Custom Services
+		</title>
+		<script type="text/javascript" src="../angular.js"></script>
+		<script type="text/javascript" src="app.js"></script>
+	</head>
+	<body>
+		<div ng-app="servicesApp" ng-controller="servicesCntrl">
+			<input type="number" placeholder="Enter Basic Sal" ng-model="uBsal">
+			<input type="button" value="GET TOTAL TAX" ng-click="getTotalTaxVal()">
+			<ul>
+				<li>
+					Total Sal is: {{totalSal}}
+				</li>
+				<li>
+					Total Tax need to be paid {{totalTax}}
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>

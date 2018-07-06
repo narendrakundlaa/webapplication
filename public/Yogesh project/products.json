@@ -1,0 +1,48 @@
+{	
+	"prodDetails": [
+		{
+			"name": "Honor10 (Midnight Black, 128 GB)(6 GB RAM)",
+			"price": "32999",
+			"manu": "Samsung",
+			"imageurl": "image/honer.jpg",
+            "detail":"24MP + 16MP Dual Rear Camera | 24MP Front Camera",
+            "Highlights01":"6 GB RAM | 128 GB ROM |5.84 inch Full HD+ Display",
+            "Highlights02":"24MP + 16MP Dual Rear Camera | 24MP Front Camera",
+            "Highlights03":"3400 mAh Lithium Polymer Battery",
+            "Highlights04":"Huawei Kirin 970 Processo",
+            "seller":"Smart420",
+            "payment01":"No cost EMI starting from ₹3,667/month",
+            "payment02":"Cash on Delivery",
+            "payment03":"Net banking & Credit/ Debit/ ATM card",
+            "description":"The Honor 10 is here to take your smartphone experience to the next level. With superior features, such as a 24 MP + 16 MP AI Camera system, the AI Photography Mode, and 3D Portrait Lighting, this phone helps you take professional-like photos everywhere you go. "
+		},
+		{
+			"name": "Samsung Galaxy OnNxt(Gold,64 GB)(3GB RAM)",
+			"price": "12900",
+			"manu": "Samsung",
+			"imageurl": "image/Samsung-Galaxy-On-Nxt.jpg",
+            "detail" : "13MP Rear Camera | 8MP Front Camera"
+		},
+		{
+			"name": "Dell Inspiron Corei3 6th Gen(4 GB/1 TB HDD/Linux) 5567 Laptop",
+			"price": "₹30,990",
+			"manu": "Dell",
+			"imageurl": "image/dell_inspiron.jpg",
+           "detail":"Linux/Ubuntu Operating System"
+		},
+		{
+			"name": "Lenovo Corei5 7thGen(8GB/1TB HDD/DOS/2GB Graphics)",
+			"price": "₹41,990",
+			"manu": "Lenovo",
+			"imageurl": "image/lenovo.jpg",
+            "detail":"DOS Operating System"
+		},
+		{
+			"name": "Apple iPad 32GB 9.7inch",
+			"price": "₹22,900",
+			"manu": "Apple",
+			"imageurl": "image/apple_ipad.jpg",
+            "detail":"iOS 10 World's Most Advanced OS"
+		}
+	]
+}

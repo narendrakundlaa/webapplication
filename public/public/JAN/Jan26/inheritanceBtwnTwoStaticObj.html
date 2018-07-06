@@ -1,0 +1,62 @@
+<html>
+	<head>
+		<title>
+			Demonstrating inheritance btwn two Static Objects
+		</title>
+	</head>
+	<body>
+		<div>
+			Two Static objects... 
+		</div>
+		<script type="text/javascript">
+			var sellerData = {
+				sellerName: 'Indian Electronics',
+				sellerLocation: 'New Delhi',
+				sellerRating: '4.2/5',
+				sellerId: 'ID-SL-00123',
+				showSellerData: function(){
+					console.log("--Product Seller Info--");
+					console.log("Seller Name" + this.sellerName);
+					console.log("Seller Location" + this.sellerLocation);
+					console.log("Seller Id" + sellerData.sellerId);
+				}
+			}
+			var product1 = {
+				name: 'laptop',
+				image: 'images/laptop.png',
+				"price": 400,
+				discountPercent: 15,
+				'manufacturer': 'Samsung',				
+				displayProdDetails: function() {
+					console.log("Product Name " + this.name);
+					console.log("Product Price " + this.price);
+					console.log("Product discountPercent " + this.discountPercent);
+					console.log("Product manufacturer " + product1.manufacturer);
+					this.showSellerData();					
+				}
+			}
+
+			var product2 = {
+				name: 'Mobile',
+				image: 'images/mbl.png',
+				"price": 4000,
+				discountPercent: 5,
+				'manufacturer': 'HTC',
+				displayProdDetails: function() {
+					console.log("Product Name " + this.name);
+					console.log("Product Price " + this.price);
+					console.log("Product discountPercent " + this.discountPercent);
+					console.log("Product manufacturer " + product1.manufacturer);
+					this.showSellerData();
+				}
+			}
+			product1.__proto__ = sellerData;
+			product2.__proto__ = sellerData;
+			product1.displayProdDetails();
+
+			product2.displayProdDetails();
+			console.log(product1);
+
+		</script>
+	</body>
+</html>

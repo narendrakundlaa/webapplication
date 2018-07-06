@@ -1,0 +1,51 @@
+<html>
+	<head>
+		<title>
+			Demonstrating Angular Filters
+		</title>
+		<script type="text/javascript" src="../../../angular.js"></script>
+		<script type="text/javascript" src='app.js'></script>
+		<link rel="stylesheet" type="text/css" href="app.css">
+	</head>
+	<body>	
+		<div ng-app="filterApp" ng-controller="filterCntrl">
+			<div class="title">
+				Employee Details
+			</div>
+			<div style="margin: 20px;">
+				<input type="text" placeholder="Enter search Text" ng-model="searchText">
+				<input type="number" placeholder="limit value" ng-model="maxitems">
+			</div>
+			<table cellspacing="5" cellpadding="5">
+				<thead>
+					<tr>
+						<th>Sno.</th>
+						<th>Emp Name</th>
+						<th>Gender</th>
+						<th>Salary</th>
+						<th>Date Of Joining</th>
+						<th>Department</th>
+						<th>Age.</th>
+						<th>Years left for Retirement</th>					
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="details in empData | filter:searchText | orderBy:'sal' | limitTo: maxitems">
+						<!--orderBy:'-sal' is dessending order if we need assending just orderBy:'sal' -->
+						<td>{{$index + 1}}</td>
+						<td>{{details.name | uppercase}}</td>
+						<td>{{details.gender}}</td>
+						<td>{{details.sal | currency:'Rs'}}</td>
+						<td>{{details.doj | date:'mm/dd/yy'}}</td>
+						<td>{{details.department}}</td>
+						<td>{{details.age | number}}</td>
+						<!-- if we required inside field ....<td ng-class="details.age > 30 ? 'redbg' : 'bluebg'" {{details.age | agevalidation}}>{{details.age | number}}</td>-->
+						<!--Start custem filterhere-->
+						<td ng-class="details.age > 30 ? 'redbg' : 'bluebg'">{{details.age | agevalidation}}</td>
+					</tr>
+				</tbody>
+			</table>
+			
+		</div>
+	</body>
+</html>

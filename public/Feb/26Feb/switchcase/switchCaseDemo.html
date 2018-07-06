@@ -1,0 +1,59 @@
+<html>
+	<head>
+		<title>Demonstrating Switch case directives</title>
+		<script type="text/javascript" src="../angular.js"></script>
+		<script type="text/javascript" src="app.js"></script>
+		<style type="text/css">
+			.tab {
+				width: 120px;
+				text-align: center;
+				border: 1px solid;
+				padding: 5px;
+				float: left;
+				background: #ccc;
+			}
+			.tab:hover {
+				cursor: pointer;
+				background: blue;
+				color: white;
+				font-weight: bolder;
+			}
+			.tabContainer {
+				text-align: center;
+				clear: both;
+			}
+			h1{
+				color: green;
+			}
+			.data{
+				clear: both;				
+				top: 50px;
+			}
+		</style>
+	</head>
+	<body ng-app="switchApp" ng-controller="switchAppCntrl">	
+		<div class="tab" ng-click="selectTab('tab1')">TAB1</div>
+		<div class="tab" ng-click="selectTab('tab2')">TAB2</div>
+		<div class="tab" ng-click="selectTab('tab3')">TAB3</div>
+		<div class="tab" ng-click="selectTab('tab4')">TAB4</div>
+		<div ng-switch="selectedTab">
+			<!-- amoung multiple options we can go for switch case-->
+			<div class="tabContainer" ng-switch-when="tab1"><!-- set tab1 by default selected -->
+				<h1>TAB1</h1> content.....
+			</div>
+			<div class="tabContainer" ng-switch-when="tab2">
+				<h1>TAB2</h1> content
+			</div>
+			<div class="tabContainer" ng-switch-when="tab3">
+				<h1>TAB3</h1> content
+			</div>
+			<div class="tabContainer" ng-switch-when="tab4">
+				<h1>TAB4</h1> content
+			</div>
+		</div>
+		<div class="data">
+			<li>Andhra pradesh</li>
+			<li>Anantapur</li>
+		</div>
+	</body>
+</html>

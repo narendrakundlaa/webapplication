@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<h1>Webworker examples</h1>
+
+<h3>webworker message : <span id="result"></span></h3>
+<div id="webMsg"></div>
+<script type="text/javascript">
+	 w = new Worker("webworker.js");        
+       	    w.onmessage = function(event){
+            document.getElementById("result").innerHTML = event.data;   //  event.data manditory  
+    } 
+</script>
+</body>
+</html>

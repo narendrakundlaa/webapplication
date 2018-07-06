@@ -1,0 +1,45 @@
+<html>
+	<head>
+		<title>
+			Demonstrating Angular two way data binding
+		</title>
+		<script type="text/javascript" src="../angular.js"></script>
+		<script type="text/javascript" src="modelapp.js"></script>
+	</head>
+	<body>
+		<div ng-app="bindingApp" ng-controller='bindingCntrl'>
+			<ul>
+				<li>
+					Enter ur name <input type="text" ng-model="userDetails.uname">
+				</li>
+				<li>
+					Enter ur age <input type="text" ng-model="userDetails.uage">
+				</li>
+				<li>
+					Select Country 
+					<select ng-model="userDetails.location.personal.ucountry">
+						<option>India</option>
+						<option>Chine</option>
+						<option>Japan</option>
+
+					</select>
+				</li>
+				<li>
+					<input type="button" value="Save">
+				</li>
+			</ul>
+			{{userDetails}}
+			<UL>
+				<li>
+					user name is {{userDetails.uname}}
+				</li>
+				<li>
+					user age is {{userDetails.uage}}
+				</li>
+				<li>
+					user countdry is {{userDetails.ucountry}}
+				</li>
+			</UL>
+		</div>
+	</body>
+</html>

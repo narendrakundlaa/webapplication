@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>validation</title>
+		<script type="text/javascript" src="../angular.js"></script>
+		<script type="text/javascript" src="validation.js"></script>
+		<link rel="stylesheet" type="text/css" href="validation.css">
+	</head>
+	<body ng-app="myValidation" ng-controller="validationCntrl">
+		<form method="GET" action="http://abcd.com" novalidate name="userDetails">
+			Enter Your Name : <input type="text" name="uname" ng-model="user.uname" required>
+			<span class="erro" ng-show="userDetails.uname.$dirty && userDetails.uname.$invalid || userDetails.uname.$touched ">Name is Manditory Field</span><p></p>
+			Enter Your Email : <input type="email" name="uemail" ng-model="user.uemail" required>
+			<span class="erro" ng-show="userDetails.uemail.$dirty && userDetails.uemail.$invalid">Invalid Email</span><br/>
+			<input type="button" value="Submit" ng-disabled="userDetails.$invalid">
+		</form>
+	</body>
+</html>

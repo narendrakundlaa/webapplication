@@ -1,0 +1,52 @@
+<html>
+	<head>
+		<title>
+			Demontrating Objects with Behaviour
+		</title>
+	</head>
+	<body>
+		<div>
+			Objects with Behaviour
+		</div>
+		<script type="text/javascript">
+			var stdData = {
+				name: 'Prasad',
+				gender: 'M',
+				age: 40,
+				marks: [40, 35, 36],
+				showStudentDetails: function() {
+					stdData.getTotalAndAvg();
+					console.log("Student name is " + this.name);
+					console.log("Student Age "  + stdData.age);
+					console.log("Student gender "  + stdData.gender);
+					console.log("Student Avg "  + stdData.avg);
+				}			
+			};
+			stdData.getTotalAndAvg = function() {
+				this.total = 0;
+				for (var i = 0; i < this.marks.length; i++) {
+					this.total += stdData.marks[i];
+				}
+				stdData.avg = total/this.marks.length;
+			};
+
+			var empDetails = {
+				name: 'Krish',
+				gender: 'Male',
+				department: 'Information Tech',
+				"showData": function() {
+					console.log("employee details");
+					console.log("Employee name " + this.name);
+					console.log("Employee Dep " + empDetails.department);
+					console.log("Employee Gender " + this.gender);
+				}
+			};
+			
+			stdData.showStudentDetails();
+			empDetails.showData();
+
+			console.log(stdData);
+			console.log(empDetails);
+		</script>
+	</body>
+</html>

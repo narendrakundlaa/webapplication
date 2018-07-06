@@ -1,0 +1,61 @@
+<html>
+	<head>
+		<title>
+			Creating modularized code and working with employee details.
+		</title>
+	</head>
+	<body>
+		<!-- -->
+		<script type="text/javascript">
+			
+			function getPfValue(eBasicSal) {
+				var pf = (12 * eBasicSal )/100;
+				return pf;
+			}
+
+			function getHra(bsal) {
+				var hra = (25 * bsal) / 100;
+				return hra;
+			}
+
+			function getTSalAndIncrmnt(gender) {
+				var b = 50;
+				var c = 90;
+				var eBasicSal = 10000;
+				var pf = getPfValue(eBasicSal, b, c);
+				var hr = getHra(eBasicSal);
+				totalSal = eBasicSal + pf + hr;
+
+				if (gender == 'male') {
+					if (totalSal > 30000) {
+						increment = (20 * totalSal) / 100;
+					} else {
+						increment = (25 * totalSal) / 100;
+					}
+				} else {
+					if (totalSal > 30000) {
+						increment = (25* totalSal) / 100;
+					} else {
+						increment = (30 * totalSal) / 100;
+					}
+				}
+				return increment;
+			}
+			function displayDetails() {
+				var ename = "PRasad";
+				var eage = 40;
+				var eGender = 'Male';
+				
+				var increment = 0;
+				var totalSal;
+				increment = getTSalAndIncrmnt(eGender);
+				console.log("Employee Details");
+				console.log("Employuee name "  + ename);
+				console.log("Employuee Age "  + eage);
+				console.log("Employuee Gender "  + eGender);
+				console.log("Employuee increment value "  + increment);
+			}
+			displayDetails();
+		</script>
+	</body>
+</html>

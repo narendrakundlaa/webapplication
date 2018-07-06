@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<title>
+			Jquery Animation effects using fade/in/out.
+		</title>
+		<script type="text/javascript" src="../jquery.js"></script>
+		<style type="text/css">
+			.block {
+				border: 2px solid;
+				background: Green;
+				width: 150px;
+				height: 160px;
+				text-align: center;
+				margin: 30px;
+				padding: 10px;
+				position: absolute;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<input type="button" value="Animate" onclick='applyStyle()'>
+			
+		</div>
+		<div class="block">
+			Content
+		</div>		
+		<script type="text/javascript">
+			function applyStyle() {
+				$('.block').animate({
+					left: '150px',
+					top: '90px',
+					height: '200px',
+					width: '100px'
+				}, 2000);
+			}
+		</script>
+	</body>
+</html>

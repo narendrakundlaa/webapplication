@@ -1,0 +1,77 @@
+<html>
+	<head>
+		<title>
+			Demonstrating repeat and http service
+		</title>
+		<script type="text/javascript" src="angular.js"></script>
+		<script type="text/javascript" src="app.js"></script>
+		<style type="text/css">
+			li {
+				list-style: none;
+				margin: 5px;
+			}
+			.block {
+				background: #ccc;
+				margin: 10px;
+				padding: 10px;
+				border: 1px solid;
+			}
+			.loadingBlock {
+				position: absolute;
+				left: 35%;
+				top: 10%;
+			}
+			.error {
+				text-align: center;
+				font-size: 20px;
+				color: red;
+				margin: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div ng-app="httpapp" ng-controller="httpappCntrl">
+			<input type="button" value="GET DATA" ng-click="getData();"> 
+			<div class="error" ng-show="showErr">
+				Error while communicating with Server
+			</div>
+			<div class="loadingBlock" ng-show="showLoading">
+				<img src="images/lg.double-ring-spinner.gif" />
+			</div>
+			<div class="block" style="background:{{colors[$index]}}" ng-repeat="item in productData">				
+				<ul>
+					<li>
+						{{$index + 1}}
+					</li>
+					<li>
+						Product Name : {{item.name}}
+					</li>
+					<li>
+						Product Manu : {{item.manu}}
+					</li>
+					<li>
+						Product Price : {{item.price}}
+					</li>
+					<li>
+						Product seller : {{item.seller}}
+					</li>
+					<li>
+						Product color : {{item.bgClr}}
+					</li>
+					<li>
+						<img src="{{item.image}}" />
+					</li>
+					<li>
+						Locations Available {{item.locationsAvailable}}
+						<ul>
+							<li ng-repeat="loc in item.locationsAvailable">
+								{{loc}}
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+
+		</div>
+	</body>
+</html>

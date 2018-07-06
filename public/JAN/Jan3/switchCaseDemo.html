@@ -1,0 +1,61 @@
+<html>
+	<head>
+		<title>
+			Demonstrating switch Case control structure.
+		</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var p1 = prompt("Enter first value");
+			p1 = parseInt(p1);
+			var p2 = prompt("Enter first value");
+			p2 = parseInt(p2);
+
+			var userSelection = prompt("Select add/mul/sub/div");
+			/*if (userSelection == 'add') {
+				var sum = 0;
+				sum = p1 + p2;
+				console.log("The sum is "  + sum);
+			} else if (userSelection == 'sub') {
+				var sub = 0;
+				sub = p1 - p2;
+				console.log("The Substration is "  + sub);	
+			}	else if (userSelection == 'mul') {
+				var mul = 0;
+				mul = p1 * p2;
+				console.log("The mul is "  + mul);
+			} else if (userSelection == 'div') {
+				var div = 0;
+				div = p1 / p2;
+				console.log("The Div is "  + div);
+			} else {
+				console.log("Wrong selection try again.");
+			} */
+
+			switch(userSelection){
+				case 'add':
+					var sum = 0;
+					sum = p1 + p2;
+					console.log("The sum is "  + sum);
+					break;
+				case 'mul':
+					var mul = 0;
+					mul = p1 * p2;
+					console.log-("The mul is "  + mul);
+					break;
+				case 'div':
+					var div = 0;
+					div = p1 / p2;
+					console.log("The Div is "  + div);
+					break;
+				case 'sub':
+					var sub = 0;
+					sub = p1 - p2;
+					console.log("The Substration is "  + sub);
+					break;
+				default:
+					console.log("Wrong selection try again.");
+			}
+		</script>
+	</body>
+</html>

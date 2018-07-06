@@ -1,0 +1,44 @@
+<html>
+	<head>
+		<title>
+			Demonstrating Form Validations.
+		</title>
+		<script type="text/javascript" src="angular.js"></script>
+		<script type="text/javascript" src="app.js"></script>
+		<link rel="stylesheet" type="text/css" href="app.css">
+	</head>
+	<body>
+		<div ng-app="formApp" ng-controller="formCntrl">
+			<form method="GET" action="http://www.abcpqrtest.com/sendingdata" novalidate name="userDetails">
+				<ul>
+					<li>
+						Enter user name: <input type="text" required ng-model="details.name" name="uname">
+						<!--ng-model="details.name" here details is identifing the name object its userdefined  -->
+						<div class="err" ng-show="userDetails.uname.$dirty && userDetails.uname.$invalid && userDetails.uname.$touched">Name is mandry field</div>
+						<!-- "userDetails.uname.$dirty" use of it is display error if user enter text and clear it then only display it -->
+					</li>
+					<li>
+						Enter user Age: <input type="number" name="uage" ng-model="egrp.uage">
+						<!--ng-model="egrp.age" here egrp is identifing the name object its userdefined  -->
+						<div class="err" ng-show="userDetails.uage.$invalid">Age cannot be in string format</div>
+					</li>
+					<li>
+						Select country: 
+						<select name="ucountry">
+							<option>India</option>
+							<option>China</option>
+							<option>USA</option>
+							<option>Japan</option>
+						</select>
+					</li>
+					<li>
+						<input type="Submit" value="Save Data" ng-disabled="userDetails.$invalid">
+					</li>
+				</ul>
+			</form>	
+			{{userDetails}}		
+			{{details}} <!--ng-model="details.name" to get this object information -->
+			{{egrp}}	<!--ng-model="egrp.age" to get this object information -->
+		</div>
+	</body>
+</html>

@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<title>
+			Deo of arrays
+		</title>
+	</head>
+	<body>	
+		<script type="text/javascript">
+			var marks = [];
+			var n = prompt("how many value u want to entr");
+			n = parseInt(n);
+			for(var i = 0; i < n; i++) {
+				marks[i] = prompt("Etner the value for" + i + ' position');
+				marks[i] = parseInt(marks[i]);
+			}
+			console.log(marks);
+			// var total = marks[0] + marks[1] + marks[2] + marks[3];
+			var total = 0;
+			for (var i = 0; i < marks.length; i++) {
+				total += marks[i];
+			}
+			var avg = total/marks.length;
+			console.log(avg);
+		</script>
+	</body>
+</html>

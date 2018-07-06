@@ -1,0 +1,51 @@
+<html>
+	<head>
+		<title>
+			Demonstrating Multi controller in a Banking APP
+		</title>
+		<script type="text/javascript" src="angular.js"></script>
+		<script type="text/javascript" src="app.js"></script>
+		<link rel="stylesheet" type="text/css" href="app.css">
+	</head>
+	<body>
+		<div ng-app="bankApp" ng-controller="mainCntrl">
+			<div class="mainTitle">
+				Welcome to SBI Bank
+			</div>
+			<div class="block" ng-controller="withDrawCntrl">
+				<div class="sTitle">Withdraw Block</div>
+				<div class="tbalanceBlck">Total Balance: ${{totalBalance}}</div>
+			 	<div class="body">Enter the amount to be withdrawn: 
+			 		<input type="number" ng-model="withDrwAmt">
+			 		<input type="button" value="WithDraw" ng-click="doWithDraw()">
+				</div>
+				<div class="succsBlck" ng-show="showWthDrwSucss">
+					Successfly Amount been With Drawn worth of : 
+					<span style="color: blue; font-size:20px"> ${{withDrwAmt}}</span>
+				</div>
+				<div class="invalidError" ng-show="showWthDrwInvalidError">
+					<span style="color: green ; font-size: 30px;">{{withDrwAmt}}
+					</span> is Invalid Amount.So, Please go ahead with proper amount..
+				</div>
+				<div class="errorBlck" ng-show="showWthDrwError">
+					Insufficient Amount Please contact to our Branch..
+				</div>
+			</div>
+
+			<div ng-include="'templates/rdTemplate.htm'"></div> <!--external file to make easey to show code-->
+			<div ng-include="'templates/FdTemplate.htm'"></div>		
+
+			<div class="block" ng-controller="insurenceBlck">
+				<div class="sTitle">
+					Insurence Block
+				</div>
+				<div class="tbalanceBlck">
+					Total Balance: ${{totalBalance}}
+				</div>
+			 	<div class="body">
+			 		{{msg}}
+				</div>				
+			</div>
+		</div>
+	</body>
+</html>

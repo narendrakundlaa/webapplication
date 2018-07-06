@@ -1,0 +1,43 @@
+<html>
+	<head>
+		<title>
+			Demonstrating Dialogbox using Custom directives
+		</title>
+		<script type="text/javascript" src="../angular.js"></script>
+		<script type="text/javascript" src="app.js"></script>
+		<style type="text/css">
+			.dialogContainer{
+				width: 400px;
+				height: 200px;
+				border: 1px solid;
+				background: #ccc;
+				position: absolute;
+				left: 30%;
+				top: 10%;
+			}
+			.title, .dlgBdy {
+				border: 1px solid;
+				background: #fff;
+				font-weight: bolder;margin: 2px;
+				padding: 5px;
+			}
+			.dlgBdy {
+				height: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<div ng:app="custDir" ng_controller="custDirCntrl">
+			<div ng-controller="custDirCntrl">
+				<show-dialog dlgtitle="Save page?"></show-dialog>
+			</div>
+			<div ng-controller="custDirCntrl2">
+				<show-dialog dlgtitle="Update details?"></show-dialog> 
+			</div>
+			
+
+			
+
+		</div>
+	</body>
+</html>

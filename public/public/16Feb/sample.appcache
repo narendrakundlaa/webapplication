@@ -1,0 +1,14 @@
+CACHE:
+	/htmfiles/*.html
+	/products/*.js
+	/data/abc.json
+	/css/login.css
+
+NETWORK:
+	/payment.html
+	/data/paymentData.html
+	css/payment.css
+	js/loginValidation.js
+
+FALLBACK:
+	/customPagenotFound.html

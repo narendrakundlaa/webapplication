@@ -1,0 +1,30 @@
+body{
+	background: yellow;
+}
+p{
+	color: blue;
+	font-size: 30px;
+	text-align: center;
+}
+.password,.confirmpassword,#confirmpassword2,.Ferror,.Lerror,.Ageerror,.AgeLimit{
+	color: red;
+}
+.mainContainer{
+	position: absolute;
+	left:30%;
+	top: 15%;
+
+}
+#Register{
+	position: relative;
+	left:90px;
+	top: 30px;
+	padding: 30px;
+}
+#ShowDetails{
+	display: none;
+	position: absolute;
+    left: 69px;
+    bottom: -98px;
+	color: green;
+}

@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<title>
+			Demonstrating navigator and geoloation.
+		</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			console.log(navigator);
+			if (navigator.vendor == 'Google Inc.') {
+				alert("helo am frm Chrome");
+			} else {
+				alert("helo am frm other browser");
+			}
+
+			navigator.geolocation.getCurrentPosition(function(point){
+				console.log(point);
+				console.log(point.coords.latitude)
+				console.log(point.coords.longitude)
+			});
+		</script>
+	</body>
+</html>

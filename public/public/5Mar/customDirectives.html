@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<title>
+			Creating Custom Directives.
+		</title>
+		<script type="text/javascript" src="../angular.js"></script>
+		<script type="text/javascript" src="app.js"></script>
+		<style type="text/css">
+			.block {
+				border: 1px solid;
+				margin: 10px;
+				padding: 10px;
+				background: #ccc;
+				width: 220px;
+				height: 150px;
+			}
+		</style>
+	</head>
+	<body>
+		<div ng-app="custDirApp" ng-controller="custDirCntrl">
+
+			<div my-view color="green" id="contaier" showSal="true" userdata="details1"></div>
+
+			<my-view color="yellow" id="TEST" showSal="false" userdata="details2"></my-view>
+
+			<my-view color="yellow" id="TEST" showSal="false" userdata="details3"></my-view>
+			
+		</div>
+	</body>
+</html>

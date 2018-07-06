@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<title>
+			Demonstrating timeout and interval methods.
+		</title>
+		<style type="text/css">
+			.wlcmBlock {
+				text-align: center;
+				margin: 20px;
+				color: green;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			Our online shopping application
+		</div>
+		<div class="wlcmBlock">
+		</div>
+		<div>
+			<input type="button" value="register" onclick="stopMsg()">
+		</div>
+		<script type="text/javascript">
+			setTimeout(function(){
+				document.querySelector('.wlcmBlock').innerHTML = '<B>Thanks for visiting our page...</B>';
+
+			}, 5000 );
+
+			var regmsgAlrt = setInterval(function(){
+				alert("click on register plz");
+			} ,4000 );
+
+			function stopMsg() {
+				clearInterval(regmsgAlrt);
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,25 @@
+li {
+	list-style: none;
+}
+
+
+li {
+	
+	height: 60px;
+	width: 400px;
+	margin: 5px;
+	padding: 10px;
+	background: #ccc;
+}
+
+ul {
+	width: 500px;
+	border: 1px solid;
+	margin: 10px;
+	padding: 10px;
+}
+
+.err {
+	color: red;
+	font-weight: bolder;
+}

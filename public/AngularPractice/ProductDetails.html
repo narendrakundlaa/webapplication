@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Product Detials </title>
+		<script type="text/javascript" src="angular.js"></script>
+		<script type="text/javascript" src="ProductDetails.js"></script>
+		<style type="text/css">
+			
+			li{
+				list-style: none;
+			}
+			#block{
+				background: green;
+				color: white;
+				font-size: 30px;
+			}
+			#mobile{
+				color: red;!important
+			}
+		</style>
+	</head>
+	<body>
+		<div ng-app="productInfo" ng-controller="productCntrl">
+			<div>
+				<div id="block" style="background:{{colors[$index]}}" ng-repeat= "Narendra in productDetails">					
+					<ul>
+						<li>
+							<i id="mobile"><span >{{$index+1}}</span>.Mobile</i>
+						</li>						
+						<li>Product Name is : {{Narendra.name}}</li>
+						<li>Product Price is : {{Narendra.price}}</li>
+						<li>Product Color is : {{Narendra.color}}</li>
+					</ul>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Reading Values from input</title>
+	</head>
+	<body>
+	<div>
+		<ul>
+			<li>
+				Enter ur Name: <input type="text" id="uname">
+			</li>
+			<li>
+				Enter Ur Age: <input type="text" id="uage">
+			</li>
+			<li>
+				Select Country:
+				<select id="ucountry">
+					<option value="ind">India</option>
+					<option value="chi">China</option>
+					<option value="jap">Japan</option>
+				</select>
+			</li>
+			<li  id="userGender">Gender:<input type="radio" id="ugender" value="male">Male
+						<input type="radio" id="ugender" value="female">Female
+				
+			</li>
+			<li>
+				<input type="button" value="Submit" onclick="readValues()">
+			</li>
+		</ul>
+	</div>
+	<script type="text/javascript">
+		function readValues(){
+			var userData={};
+			userData.name = document.getElementById('uname').value;
+			userData.age = document.getElementById('uage').value;			
+			userData.country=document.getElementById('ucountry').value;
+			userData.Gender=document.getElementById('userGender').value;
+			console.log(userData);
+		}		
+		</script>
+	</body>
+</html>
+
+
+
+
+
+
+
+

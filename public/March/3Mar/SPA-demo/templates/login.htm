@@ -1,0 +1,26 @@
+<div class="title">
+	Login Details
+</div>
+<div class="login">
+	<ul>
+		<li>
+			Enter user name: <input type="text">
+		</li>
+		<li>
+			Enter account PWd: <input type="password">
+		</li>
+		<li>
+			<span class="text" ng-click="openPage('signup')">New Sign up?</span>
+			<span class="link" ng-click="openPage('frgtpwd')">For got pwd?</span>
+		</li>
+		<li>
+			<input type="button" value="Login" ng-click="login()"> <!--just my purpose-->
+		</li>
+	</ul>
+</div>
+<style type="text/css">
+	.text{
+		cursor: pointer;
+		color: green;
+	}
+</style>

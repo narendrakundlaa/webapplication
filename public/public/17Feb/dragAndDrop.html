@@ -1,0 +1,42 @@
+<html>
+	<head>
+		<title>
+			Demonstrating Drag nd Drop event handling in html5
+		</title>
+		<style type="text/css">
+			#container {
+				border: 2px solid;
+				width: 300px;
+				height: 200px;
+			}
+			img {
+				height: 120px;
+				width: 120px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="container" ondrop="onDragDrop(event)" ondragover="onDragOver(event)"></div>
+		<img src="https://bd.gaadicdn.com/processedimages/hero/glamour-2017/371X252/v_glamour-2017-drum.jpg"  id="prdImg" ondragstart="onDragStart(event)" draggable="true"/>
+		<img src="http://speedcarz.com/wp-content/uploads/2016/08/koenigsegg-agera-xs-2016-300x300.jpg"  id="prdImg2" ondragstart="onDragStart(event)" draggable="true"/>
+		<script type="text/javascript">
+			var imgId = '';
+			function onDragOver(e) {
+				e.preventDefault();
+			}
+			function onDragStart(e) {
+				var imgElement = e.target;
+				imgId = imgElement.getAttribute('id');
+			}
+			function onDragDrop(e) {
+				e.preventDefault();
+				imgId = '#' + imgId;
+				var imgElement = document.querySelector(imgId);
+				var src = imgElement.getAttribute('src');
+				var imgtag = document.createElement('img');
+				imgtag.setAttribute('src', src);
+				e.target.appendChild(imgtag);
+			}
+		</script>
+	</body>	
+</html>

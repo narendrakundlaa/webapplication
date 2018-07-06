@@ -1,0 +1,62 @@
+<html>
+	<head>
+		<title>
+			Implemeting Dynamic Event handling and demonstrating Event Bubbling and Capturing
+		</title>
+		<style type="text/css">
+			.parent {
+				width: 200px;
+				height: 200px;
+				text-align: center;
+				background: green;
+			}
+			.child {
+				width: 100px;
+				height: 100px;
+				text-align: center;
+				background: yellow;
+				margin: 10px auto;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<select onchange="getSelectedVal()" id="userOption"> 
+				<option>Left</option>
+				<option>Right</option>
+			</select>
+		</div>
+		<div>
+			<input type="button" value="LeftBtn" id="lftBtn" onclick="showMsg()">
+			<input type="button" value="RightBtn" id="rgtBtn">
+		</div>
+	 	<div class="parent">
+	 			PARENT
+	 			<div class='child'>CHILD</div>
+		</div>
+		<script type="text/javascript">
+			function showMsg() {
+				
+			}
+			function getSelectedVal() {
+				var userOption = document.querySelector('#userOption').value;
+				if (userOption == 'Right') {
+					document.querySelector('#rgtBtn').addEventListener('click', function(){
+						alert("testing");
+					});
+				} else {
+					document.querySelector('#lftBtn').addEventListener('mouseover', function(){
+						alert("testing");
+					});
+				}
+			}
+
+			document.querySelector('.parent').addEventListener('click', function(){
+				console.log("PARent got fired");
+			}, true);
+			document.querySelector('.child').addEventListener('click', function(){
+				console.log("CHILD got fired");
+			}, true);
+		</script>
+	</body>
+</html>

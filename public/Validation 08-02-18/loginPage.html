@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<script type="text/javascript" src="loginPage.js"></script>
+		<link rel="stylesheet" type="text/css" href="loginPage.css">
+	</head>
+	<body bgcolor="wheat">
+		<!--<div class="head">Welcome to <b>Blue</b>  Shopping mall</div>
+		<header>
+			<marquee></marquee>
+		</header>-->
+		<div class="mainCantainer">
+			<ul>
+				<li>
+					User Name : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="uName"><span id="Uerror"></span>
+				</li><br>
+				<li>
+					User Password : <input type="password" id="Upass"><span id="Perror"></span>
+				</li><br><br>			
+				
+					<input type="button" value="Submit" id="submit" onclick="loginPage()">
+					<a href="#" value="Register" id="Register" onclick="Register()">New Register</a><br>
+					<a href="#" value="forgotPassword" id="forgotPassword" onclick="forgotPassword()">forgotPassword..?</a>
+				
+			</ul>
+		</div>
+<p> Please Wait download will begin in <span id="countdowntimer">10 </span> Seconds</p>		
+		<div class="ShowDetails">
+			<!--<ul>
+				<li>
+					Custermer Name is : <span id="UserName"></span>
+				</li>
+				<li>
+					Custermer password is : <span id="UserPass"></span>
+				</li>
+			</ul>-->
+			<h1>Successfully login...........</h1>
+		</div>
+	</body>
+</html>

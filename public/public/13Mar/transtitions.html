@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<title>
+			Demonstrating CSS3 Transformations.
+		</title>
+		<script type="text/javascript" src="../jquery.js"></script>
+		<style type="text/css">
+			.block {
+				width: 300px;
+				height: 80px;
+				border: 1px solid;
+				background: #ccc;
+				margin: 50px auto;
+				text-align: center;
+				
+			}	
+			.block:hover {
+				width: 500px;
+				transition: width 2s, height 1s, transform 1s;
+				height: 200px;
+				transform: rotate(120deg);
+			}
+			
+		</style>
+	</head>
+	<body>
+		
+		<div class="block">
+			CONTENT
+		
+	</body>
+</html>

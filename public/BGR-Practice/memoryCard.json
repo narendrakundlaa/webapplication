@@ -1,0 +1,29 @@
+{
+	"memory": [
+		{
+			"name": "samsung",
+			"capacity": "32GB",
+			"price": "560",
+			"image": "memory/samsung.jpeg"
+		},
+		{
+			"name": "samsung",
+			"capacity": "128GB",
+			"price": "999",
+			"image": "memory/samsung128.jpg"
+		},
+		{
+			"name": "transcend",
+			"capacity": "32GB",
+			"price": "350",
+			"image": "memory/transcend.jpg"
+		},
+		{
+			"name": "sundisk",
+			"capacity": "16GB",
+			"price": "250",
+			"image": "memory/sundisk.jpg"
+		}
+
+	]
+}

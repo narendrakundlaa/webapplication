@@ -1,0 +1,60 @@
+<html>
+	<head>
+		<title>
+			Demonstrating Html Input elements and form tag..
+		</title>
+		<style type="text/css">
+			.container {
+				border: 1px solid;
+				background: #ccc;
+				position: absolute;
+				top: 20px;
+				left: 20px;
+				bottom: 20px;
+				right: 20px;
+				overflow: auto;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<form method="POST" action="http://www.abcpqrtest.com/sendata">
+			<ul>
+				<li>
+					<label for="uname">Enter user name: </label><input name="uname" type="text" id="uname">
+				</li>
+				<li>
+					Enter account password:<input type="password" name="acntPwd">
+				</li>
+				<li>
+					Enter ur gender: M <input type="radio" name="usergender"> F <input type="radio" name="usergender">
+				</li>
+				<li>
+					Enter the Languages you know: 
+					English: <input type="checkbox" name="lng_en">
+					Telugu: <input type="checkbox" name="lng_tl">
+					Hindi: <input type="checkbox" name="lng_hn">
+					
+				</li>
+				<li>
+					Birth Country: 
+					<select name="ucountry">
+						<option>India</option>
+						<option>China</option>
+						<option>Japan</option>
+						<option>India</option>
+					</select>
+					
+				</li>
+				<li>
+					Tell about urself <textarea name="abturself"></textarea>
+				</li>
+				<li>
+					<input type="submit" value="Save Data">
+				</li>
+			</ul>
+			</form>
+
+		</div>
+	</body>
+</html>

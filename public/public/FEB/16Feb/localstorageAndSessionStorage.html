@@ -1,0 +1,64 @@
+<html>
+	<head>
+		<title>
+			Demonstrating Local and Session Storage objects.
+		</title>
+		<script type="text/javascript" src="../jquery.js"></script>
+		<style type="text/css">
+			.wlcmeBlck {
+				text-align: center;
+				color: yellow;
+				font-size: 30px;
+				padding: 20px;
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div style="text-align:right;">
+			Select Theme
+			<select onchange="applyTheme()" id="themeSelector">
+				<option>Red</option>
+				<option>green</option>
+				<option>blue</option>
+			</select>
+		</div>
+		<div>
+			Enter ur Name: <input type="text" id="uname"> 
+			<input type="button" value="Enter" onclick="showMsg()">
+		</div>
+		<div class="wlcmeBlck">
+			Welcome to our page Mr. <span id="eUname"></span>
+		</div>
+
+
+		<script type="text/javascript">			
+			if (sessionStorage.getItem('username')) {
+				$("#eUname").html("<b>" + sessionStorage.getItem('username') + '</b>') ;
+				$(".wlcmeBlck").show(3000);
+			}
+			// Check if user has alrdy set some theme, if yes, apply that particular theme bydefault.
+			if (sessionStorage.getItem('themeName')) {
+				var theme = sessionStorage.getItem('themeName');
+				applyBackground(theme);
+			}
+
+			$("#uname").val('');
+			function showMsg() {
+				var uname = $("#uname").val();
+				sessionStorage.setItem("username", uname);
+				$("#eUname").html("<b>" + uname + '</b>') ;
+				$("#uname").val('');
+				$(".wlcmeBlck").show(3000);
+			}
+			function applyTheme() {
+				var theme = $("#themeSelector").val();
+				sessionStorage.setItem("themeName", theme);
+				applyBackground(theme);
+			}
+			function applyBackground(themeName) {
+				$("body").css('background', themeName);
+			}
+		</script>
+	</body>
+</html>

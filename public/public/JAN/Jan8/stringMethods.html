@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<title>
+			Demonstrating String methods.
+		</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var msg = "Hello all ,how are you doing today";
+			console.log(msg);
+			console.log("Length" + msg.length);
+			console.log(msg[4]);
+			console.log(msg.split('o'));
+			console.log(msg.charAt(4));
+			// console.log(msg[6]);
+			console.log(msg.charCodeAt(6));
+
+			var msg2 = " Bye all";
+			console.log(msg.concat(msg2));
+			console.log(msg.toLowerCase());
+
+			// msg = msg.replace(" ", '*');
+
+			// msg = msg.replace(/\s/g, '*');
+			msg =msg.replace(/h/ig, '%%%');
+			console.log(msg);
+
+			console.log(msg.substr(2, 10));
+			console.log(msg.slice(2, 10));
+		</script>
+	</body>
+</html>

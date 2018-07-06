@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>SwitchCase</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var p=prompt("Enter P value");
+			var q=prompt("Enter Q value");
+			p=parseInt(p);
+			q=parseInt(q);
+			var userSelection=prompt("select ADD/SUB/DIV");
+			/*if(userSelection=="ADD")
+			{
+				var sum=0;
+				sum=p+q;
+				document.write(sum);
+			}*/
+			switch (userSelection){
+			    case 'ADD':
+				var sum=0;
+				sum=p+q;
+				document.write(sum);
+				break;
+				case 'SUB':
+				var sum=0;
+				sum=p-q;
+				document.write(sum);
+				break;
+				default:
+				document.write("wrong selection");
+			}
+		</script>
+	</body>
+</html>

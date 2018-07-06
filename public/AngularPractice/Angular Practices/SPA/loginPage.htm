@@ -1,0 +1,60 @@
+
+<div class="LoginTitle">Login Page</div>
+ <div class="centerLogin">
+	<form  name="Login" novalidate>
+	<table>
+		<tr>
+			<th>User Id : <td><input type="text" name="Uname" ng-model="uname" required>
+				<span ng-show="Login.Uname.$touched && Login.Uname.$invalid"> Name Manditory</span>
+				</td></th>
+		</tr>
+		<tr>
+			<th>User Password : <td><input type="password" name="upass" ng-model="upass" required><span ng-show="Login.upass.$touched && Login.upass.$invalid"> Password Manditory</span></td></th>	
+		</tr>
+		<input class="submit" type="button" value="SUBMIT" ng-click="submit()" ng-disabled="Login.$invalid">
+		<span class="link" value="New User" ng-click="openPage('newUser')">New User.?</span>
+		<span class="link" value="New User" ng-click="openPage('ForgotPsw')">Forgot Password.?</span><br/>	
+		
+	</table>	
+	</form>
+</div>
+<style type="text/css">
+.centerLogin{
+	position: relative;
+	left:300px;
+}
+span{
+	color: red;
+}
+	.LoginTitle{
+		color: green;
+		font-size: 30px;
+		text-align: center;
+	}
+	.link{
+		color: blue;
+		cursor: pointer;
+		position: relative;
+		left:30px;
+		top: 112px;
+		margin: 10px;
+	}
+	.submit{
+		position: relative;
+		left:100px;
+		top: 85px;
+	}
+</style>
+<!--
+<form name="myForm">
+<p>Name:
+<input name="myName" ng-model="myName" required>
+<span ng-show="myForm.myName.$dirty && myForm.myName.$invalid || myForm.myName.$touched">The name is required.</span>
+</p>
+
+<p>Address:
+<input name="myAddress" ng-model="myAddress" required>
+</p>
+
+</form>
+-->

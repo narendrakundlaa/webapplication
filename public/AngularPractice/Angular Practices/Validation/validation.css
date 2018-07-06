@@ -1,0 +1,11 @@
+.erro{
+	color: red;
+}
+form{
+	border: 1px solid;
+	width: 35%;
+	height: 350px;
+	background: wheat;
+	padding: 10px;
+	margin:10px;
+}

@@ -1,0 +1,52 @@
+<html>
+	<head>
+		<title>
+			Demonstrating Webworkers
+		</title>
+		<style type="text/css">
+			#dateContainer {
+				text-align: right;
+				color: green;
+			}
+			#messageCntnr {
+				border: 1px solid;
+				max-height: 400px;
+				overflow: auto;
+			}
+			.content {
+				border: 1px solid;
+				margin: 2px;
+				padding: 3px;
+				text-align: center;
+
+			}
+		</style>
+	</head>
+	<body>
+		<div id="dateContainer">
+			Date:
+		</div>
+		<div id="messageCntnr"> </div>
+		<script type="text/javascript">
+			var myworker = new Worker("myworker.js");
+			myworker.onmessage = function(event) {
+				console.log("got msg frm Worker");
+				console.log(event.data);
+				document.querySelector('#dateContainer').innerHTML = 'DATE: ' + event.data;
+			}
+
+			var i = 0;
+			function addElement() {
+				var divelmnt = document.createElement('div');
+				divelmnt.innerHTML = 'Content ' + i;
+				i++;
+				divelmnt.setAttribute('class', 'content');
+				document.querySelector("#messageCntnr").appendChild(divelmnt);
+			}
+			setInterval(function(){
+				addElement();
+			}, 2000);
+			
+		</script>
+	</body>
+</html>

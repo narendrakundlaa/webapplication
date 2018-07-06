@@ -1,0 +1,144 @@
+<html>
+	<head>
+		<title>
+			Demonstrating Jquery Methods, selectors, traversing methods.
+		</title>
+		<script type="text/javascript" src="../jquery.js"></script>
+		<style type="text/css">
+			.sample {
+				background: green;
+			}
+			li {
+				margin: 10px;
+			}
+			.content {
+				background: green;
+				text-align: center;
+				border: 1px solid;
+				width: 100px;
+				height: 100px;
+			}
+			.tab {
+				width: 120px;
+				border: 1px solid;
+				float: left;
+				text-align: center;
+				background: #ccc;
+				padding: 5px;
+				cursor: pointer;
+			}
+			.tabSelected {
+				color: #fff;
+				background: #000;
+				font-weight: bolder;
+			}
+			.bodyContainer {
+				border: 1px solid;
+				height: 300px;
+				background: #ccc;
+				margin-bottom: 10px;
+				clear:  both;
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="pqr" class="abc">
+			<span>
+				<p>
+					HELLO1
+				</p>
+			</span>
+		</div>
+		<div id="pqr">
+			<div class="pqr">
+				<p>
+					HELLO2
+				</p>
+			</div>
+		</div>
+		<ul>
+			<li>Item0</li>
+			<li>Item1</li>
+			<li>Item2</li>
+			<li>Item3</li>
+			<li>Item4</li>
+		</ul>
+		<table>
+			<tbody>
+				<tr>
+					<td>item1</td>
+					<td>item1</td>
+					<td>item1</td>
+					<td>item1</td>
+				</tr>
+			</tbody>
+		</table>
+		<div>
+			<span>TEST1</span>
+			<span>TEST2</span>
+			<span>TEST3</span>
+			<span>
+				<a>
+					TEST4
+				</a>
+			</span>
+		</div>
+		<div id="container" class="content">Hello all</div>
+		<input type="button" value="Click1" onclick="applyCSS()">
+		<input type="button" value="Click2" onclick="applyCSS()">
+		<div class="tabContainer">
+			<div class="tab tabSelected" onclick="selectTab(event)" id="tab1">TAB1</div>
+			<div class="tab" onclick="selectTab(event)" id="tab2">TAB2</div>
+			<div class="tab" onclick="selectTab(event)" id="tab3">TAB3</div>
+			<div class="tab" onclick="selectTab(event)" id="tab4">TAB4</div>
+		</div>
+		<div id="tab1Container" class="bodyContainer" style="display:block;">
+			TAB1 Content
+		</div>
+		<div id="tab2Container" class="bodyContainer">
+			TAB2 Content
+		</div>
+		<div id="tab3Container" class="bodyContainer">
+			TAB3 Content
+		</div>
+		<div id="tab4Container" class="bodyContainer">
+			TAB4 Content
+		</div>
+
+		<script type="text/javascript">
+			function applyCSS() {
+
+				// $('div div p').addClass('sample');
+				// $('.abc#pqr').addClass('sample');
+				// $("li:even").addClass('sample');
+				// $("li:odd").css('border', '1px solid');
+				// $("li:odd").css('color', 'blue');
+				// $("li:odd").css({'color': 'blue', 'border': '1px solid'});
+				//$('li:gt(2)').addClass('sample');
+				// $('li:lt(2)').addClass('sample');
+				// $('li:eq(2)').addClass('sample');
+				// $("input[type='button']").addClass('sample');
+
+				// $('span:nth-child(2)').addClass('sample')
+				// $("#container").toggle();
+				 $('.tab').addClass('tabSelected');
+			}
+			function selectTab(event) {
+				if($(event.target).hasClass('tabSelected')) {
+					return;
+				} else {
+					$(".tab").removeClass('tabSelected');
+					$(event.target).addClass('tabSelected')
+				}
+				$(".bodyContainer").hide();
+
+				var id = $(event.target).attr('id');
+				var container = '#' + id + 'Container';
+				$(container).show();
+				 
+			}
+		</script>
+	</body>
+</html>
+

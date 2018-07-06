@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Function Demo</title>
+</head>
+<body>
+<script type="text/javascript">	
+	var name="Narendra";
+	var age=28;
+	var sal=50000;
+	var pf=0;
+	var hra=0;
+	var increment=0;
+	
+	function GetPfValue()
+	{
+		pf=20*sal/100;
+		document.write("The pf value is "+pf+"<br>");	
+		return pf;	
+	}
+	GetPfValue();
+	function GetHraValue()
+	{
+		hra=30*sal/100;
+		document.write("The hra value is "+hra+"<br>");	
+		return hra;	
+	}
+	GetHraValue();
+	function GetIncrement()
+	{
+		increment=pf+hra;
+		document.write("The increment salary is "+increment);
+		
+	}
+	GetIncrement();
+</script>
+</body>
+</html>

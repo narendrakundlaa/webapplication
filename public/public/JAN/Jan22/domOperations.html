@@ -1,0 +1,46 @@
+<html>
+	<head>
+		<title>
+			Reading values from input elements
+		</title>
+		<link rel="stylesheet" type="text/css" href="file:///D:/Test/css/mystyles.css">
+	</head>
+	<body>
+		<div>
+			<ul>
+				<li>
+					Enter ur name <input type="text" id="uname">
+				</li>
+				<li>
+					Enter ur Age <input type="text" id="uage">
+				</li>
+				<li>
+					Select Country
+					<select id="ucountry">
+						<option value="ind">INDIA</option>
+						<option value="chn">CHINA</option>
+						<option value="jap">JAPAN</option>
+					</select>
+				</li>
+				<li>
+					<input type="button" value="Save Data" onclick="readValues()">
+				</li>
+			</ul>
+		</div>
+		<script type="text/javascript">
+			function readValues() {
+				var userData = {};
+				userData.name = document.getElementById('uname').value;
+				userData.age = document.getElementById('uage').value;			
+
+				var drpDwn = document.getElementById('ucountry'); // Get the reference of dropdown element.
+				var index = drpDwn.selectedIndex;
+				
+				var selectedObj  = drpDwn.options[index];
+				userData.country = selectedObj.value;
+				console.log(userData);
+			}
+			
+		</script>
+	</body>
+</html>

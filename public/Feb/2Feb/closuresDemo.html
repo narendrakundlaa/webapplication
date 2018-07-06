@@ -1,0 +1,78 @@
+<html>
+	<head>
+		<title>
+			Demonstrating JS Closures...
+		</title>
+		<script type="text/javascript" src="lib/arthmticOperations.js"></script>
+		<style type="text/css">
+			ul {
+				border: 1px solid;
+				background: #ccc;
+				margin: 20px;
+				padding: 1px;
+			}
+			li {
+				list-style: none;
+				margin: 10px;
+			}
+			.title {
+				text-align: center;
+
+			}
+		</style>
+	</head>
+	<body>
+		<div class="title">
+			Demonstrating Closures.
+		</div>
+		<ul>
+			<li>
+				Enter First value: <input type="text" id="fval">
+			</li>
+			<li>
+				Enter Second value: <input type="text" id="sval">
+			</li>
+			<li>
+				<input type="button" value="GET SUM" onclick="
+				doOperation('add')">
+				<input type="button" value="GET SUB" onclick="doOperation('sub')">
+				<input type="button" value="GET MUL" onclick="doOperation('mul')">
+				<input type="button" value="GET DIV" onclick="doOperation('div')">
+			</li>
+		</ul>
+		<div>
+			No. of times been used <span id="timesCount"></span>
+		</div>
+		<div>
+			The result of <span id="opType"></span>&nbsp;&nbsp;<span id="result"></span>
+		</div>
+		<script type="text/javascript">
+			var count = 0;
+			function doOperation(type) {
+				var result;
+				count++;
+				var fVal = document.querySelector('#fval').value;
+				var sVal = document.querySelector('#sval').value;
+				fVal = parseInt(fVal);
+				sVal = parseInt(sVal);
+				switch(type) {
+					case 'add':
+						result = utilmethods.addValues(fVal, sVal);
+						break;
+					case 'mul':
+						result = utilmethods.mulValues(fVal, sVal);
+						break;
+					case 'div':
+						/// result = divValues(fVal, sVal);
+						break;
+					case 'sub':
+						result = utilmethods.subValues(fVal, sVal);
+						break;
+				}
+				document.querySelector("#timesCount").innerHTML = count;
+				document.querySelector("#opType").innerHTML = type;
+				document.querySelector("#result").innerHTML = result;
+			}
+		</script>
+	</body>
+</html>

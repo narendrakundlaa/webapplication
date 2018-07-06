@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>http Local data</title>
+	<style type="text/css">
+		.block{
+			width: 400px;
+			margin: 10px;
+			padding: 10px;			
+			background: #ccc;
+			border: 1px solid green;
+			float: left;
+		}
+		li{
+			list-style: none;
+
+		}
+		img{
+			width: 300px;
+			height: 200px;
+		}
+	</style>
+	<script type="text/javascript" src="angular.js"></script>
+	<script type="text/javascript" src="http2Local01.js"></script>
+</head>
+<body>
+	<div ng-app="httpLocal" ng-controller="httpLocalCntrl">
+		<div class="block" style="background: {{color[$index]}}" ng-repeat="bikes in NewBikes">
+			<ul>
+				<li>
+					Bike Name is : {{bikes.name}}
+				</li>
+				<li>
+					Bike Ingine is : {{bikes.ingine}}
+				</li>
+				<li>
+					Bike speed is : {{bikes.speed}}
+				</li>
+				<li>
+					Bike mileage is : {{bikes.mileage}}
+				</li>
+				<li>
+					Bike Price is : {{bikes.price}}
+				</li>
+				<li>
+					<img src="{{bikes.images}}">
+				</li>
+			</ul>
+		</div>
+	</div>
+
+</body>
+</html>

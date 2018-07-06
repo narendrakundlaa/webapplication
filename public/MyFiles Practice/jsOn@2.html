@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Json demo2</title>
+</head>
+<body>
+<script type="text/javascript">
+	/*var stuDetails=
+	{
+		name : "Narendra",
+		Age:28,
+		Village:"EGRP",
+		State:"AP",
+		marks:[40,50,60],
+		total:0,
+		avg:0,
+	};
+	stuDetails.total=stuDetails.marks[0]+stuDetails.marks[1];
+
+	document.write("Student name is "+stuDetails.name+"<br>");
+	document.write(stuDetails.total)
+	console.log(stuDetails["Village"]);*/
+	<!-- complex object data-->
+	var contact={
+		name:"Narendra",
+		phone:{
+			personal:9494931945,
+			office:[7013051080,9676735372],
+		},
+	};
+	document.write(contact.name+"<br>");
+	document.write(contact.phone.office);
+	console.log(contact);
+	contact.nick="Nari";
+	console.log(contact);
+	for(var temp in contact)
+	{
+		console.log("the key is "+temp);
+		console.log("the value is "+contact[temp]);
+
+	}
+	console.log(contact);
+</script>
+</body>
+</html>

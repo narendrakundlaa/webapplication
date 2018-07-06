@@ -1,0 +1,44 @@
+
+<html>
+	<head>
+		<title>
+			Demonstrating Jquery Traversing Methods
+		</title>
+		<script type="text/javascript" src="../jquery.js"></script>
+		<style type="text/css">
+			.highlight {
+				border: 1px solid;
+				padding: 5px;
+				margin: 5px;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<div>
+				<div id="content">
+					Page Content
+				</div>
+			</div>
+		</div>
+		<ul>
+			<li>Item1</li>
+			<li class="abc">Item2</li>
+			<li>Item3</li>
+			<li>Item4</li>
+			<li>Item4</li>
+			<span>TEST</span>
+		</ul>
+		<input type="button" value="APPLY" onclick="applyStyles()">
+		<script type="text/javascript">
+			function applyStyles() {
+				// $('#content').parents().addClass("highlight");
+				// $('#content').parentsUntil('body').addClass("highlight");
+				// $("ul").find('.abc').addClass('highlight');
+				// $(".abc").next().addClass('highlight');
+				// $(".abc").prev().addClass('highlight');
+				$(".abc").nextAll().addClass('highlight');
+			}
+		</script>
+	</body>
+</html>

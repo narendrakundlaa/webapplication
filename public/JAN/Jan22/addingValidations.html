@@ -1,0 +1,37 @@
+<html>
+	<head>
+		<title>
+			Validating input elements data
+		</title>
+		<link rel="stylesheet" type="text/css" href="app.css">
+		<script type="text/javascript" src="app.js"></script>
+		<style type="text/css">
+			.err {
+				color: red;
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<ul>
+				<li>
+					Enter first number <input type="text" id="fval" onkeypress="return validateData(event)">
+					<div class="err" id="fvalErr">
+						It is mandtry
+					</div>
+				</li>
+				<li>
+					Enter Second number <input type="text" id="sval"  onkeypress="return validateData(event)">
+				</li>
+				<li>
+					<input type="button" value="Do Sum" onclick="doSum()">
+				</li>
+				<li  id="resultCntnr">
+					The sum of values is: 
+					<span id="resultBlck"></span>
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>first programme</title>
+	<style type="text/css">
+		#color{
+			color: green;
+		}
+		#color2{
+			background: blue;
+			color: white;
+			font-size: 20px;
+		}
+	</style>
+	<script type="text/javascript" src="../angular.js"></script>
+	<script type="text/javascript" src="first.js"></script>
+</head>
+<body ng-app="firstApp" ng-controller="firstCntrl">
+	<ul>
+		<li>
+			Enter Your Name : <input type="text" id="color" ng-model="stdInfo.Name">			
+		</li>
+		<span id="color2">{{stdInfo.Name}}</span>
+		<li>
+			Enter Your age : <input type="text" id="color" ng-model="stdInfo.Age">
+			
+		</li>
+		<span id="color2">{{stdInfo.Age}}</span>
+	</ul>	
+	<li>Addition of {{a}} and {{b}} numbers is : {{a+b}}</li>	
+	<li>Multiplication of {{x}} and {{y}} numbers is : {{a+b}}</li>		
+			{{stdInfo}}
+</body>
+</html>

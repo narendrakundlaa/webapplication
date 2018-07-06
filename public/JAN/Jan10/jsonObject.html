@@ -1,0 +1,48 @@
+<html>
+	<head>
+		<title>
+			Demonstrating JSON
+		</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+
+			// var sdetails = [20,"RAJ", "hyd", [34, 30,44], 0, 0];
+			var sdetails = {
+				uname: "raj",
+				userAge: 40,
+				'location':'Hyderabad',
+				marks: [34, 4, 90],
+				total: 0,
+				avg: 0
+			};
+			
+			sdetails.total = sdetails.marks[0] + sdetails.marks[1] + sdetails.marks[2]; // total marks
+			sdetails.avg= sdetails.total/sdetails.marks.length; //AVG
+
+			// var empDetails = ["krish", 30,4000];
+			var empDetails = {
+				"name": 'Krish',
+				'age': 40,
+				sal: 4000
+			};
+			
+			function displaySdetails() {
+				console.log("Student Details");
+				console.log("Sname is " + sdetails.uname);
+				console.log("Location is " + sdetails.location);
+				console.log("total is " + sdetails.total);
+				console.log("Avg is " + sdetails['avg']);
+
+			}
+			function displayEmpDetails(){
+				console.log("employee details");
+				console.log("Employee name is " + empDetails.name);
+				console.log("Employee Age is " + empDetails.age);
+				console.log("Employee Salary is " + empDetails.sal);
+			 }
+			 displaySdetails();
+			 displayEmpDetails();
+		</script>
+	</body>
+</html>

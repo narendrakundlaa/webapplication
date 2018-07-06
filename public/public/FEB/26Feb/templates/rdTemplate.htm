@@ -1,0 +1,16 @@
+<div class="block" ng-controller="RDCntrl">
+	<div class="sTitle">
+		Recurring Deposit Block
+	</div>
+	<div class="tbalanceBlck">
+		Total Balance: ${{totalBalance}}
+	</div>
+ 	<div class="body">
+ 		Enter the amount to be RD: 
+ 		<input type="number" ng-model="rdAmt">
+ 		<input type="button" value="RD" ng-click="doRd()">
+	</div>
+	<div class="succsBlck" ng-show="showrdwSucss">
+		Successfly Amount been RDed
+	</div>
+</div>

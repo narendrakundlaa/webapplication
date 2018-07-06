@@ -1,0 +1,45 @@
+<html>
+	<head>
+		<title>
+			Jquery Animation effects using show/hide/toggle methods.
+		</title>
+		<script type="text/javascript" src="../jquery.js"></script>
+		<style type="text/css">
+			.block {
+				border: 2px solid;
+				background: Green;
+				width: 150px;
+				height: 160px;
+				text-align: center;
+				margin: 30px;
+				padding: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<input type="button" value="Slide UP" onclick='applyStyle("up")'>
+			<input type="button" value="Slide down" onclick='applyStyle("dwn")'>
+			<input type="button" value="toggle Slide" onclick='applyStyle("tog")'>
+		</div>
+		<div class="block">
+			Content
+		</div>		
+		<script type="text/javascript">
+			function applyStyle(type) {
+				switch(type) {
+					case 'up':
+						$(".block").slideUp(3000, function(){
+						});
+						break;
+					case 'dwn':
+						$(".block").slideDown(1000);
+						break;
+					case 'tog':
+						$(".block").slideToggle(1000);		
+						break;
+				}
+			}
+		</script>
+	</body>
+</html>

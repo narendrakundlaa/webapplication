@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>httpAjaxMobiles</title>
+		<script type="text/javascript" src="angular.js"></script>
+		<script type="text/javascript" src="httpAjaxMobiles.js"></script>
+		<style type="text/css">
+			.loading{
+				top: 25%;
+				left:35%;
+				position: absolute;
+			}
+			.loadingImage{
+				width : 150px;
+				height: 150px;
+			}
+			li{
+				list-style: none;
+			}
+			.block{
+				width: 400px;
+				border: 1px solid green;
+				float: left;
+				margin: 10px;
+				padding: 10px;
+			}
+			.image{
+				width:250px;
+				height: 300px;
+			}
+			#more{
+				color: blue;
+				font-size: 20px;
+				cursor: pointer;
+			}
+			#Special{
+				color: green;
+				font-size: 20px;
+				cursor: pointer;
+				position: relative;
+				left:20px;
+			}
+			#warrenty{
+				color: red;
+				cursor: pointer;
+				text-decoration: underline;
+				font-size: 20px;
+				position: relative;
+				left:20px;
+			}
+			.Headder{
+				border: 1px solid blue;
+				width: 100%;
+				height: 100px;
+				background: blue;
+				line-height: 100px;
+			}
+			#SearchBox{
+				
+				text-align: right;
+			}
+			#Maintitle{
+				font-size: 50px;
+				color: white;
+				margin-left: 100px;
+			}
+			.G{
+				font-size: 30px;
+				color: yellow;
+			}
+
+		</style>
+
+	</head>
+	<body>
+		<div ng-app="httpAjaxMobiles" ng-controller="httpAjaxMobilesCntrl">
+			<div class="Headder"> <span id="Maintitle">Welcome to Mobile World</span>
+				<span class="G">Find 4G mobiles</span> <input type="button" value="4G Mobiles" ng-click="mobileData()">
+				<span id="SearchBox">
+						Search : <input type="text" placeholder="Search Your items" ng-model="SearchMobiles">
+				</span>
+			</div>			
+			<div class="loading" ng-show="loadingImage">
+				<img class="loadingImage" src="loading/loading002.gif">
+			</div>
+			<div class="error" ng-show="errorMsg">
+				Server error........
+			</div>
+			<div class="block" style="background: {{color[$index]}}" ng-repeat="world in MobilesData | filter:SearchMobiles">
+				<ul>
+					<li>
+						Mobile Name : {{world.name}} 
+					</li>
+					<li>
+						Mobile Price : {{world.price}}
+					</li>
+					<li>
+						Mobile Dual Sim : {{world.dual}}
+					</li>
+					<li>
+						<img class="image" src="{{world.image}}">
+					</li>
+					<span id="more" title="For more Details"><a href="samsung.html">MoreDetails</a></span>
+					<span id="Special" title="Specilizations">Specilizations</span>
+					<span id="warrenty">Warrenty</span>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>

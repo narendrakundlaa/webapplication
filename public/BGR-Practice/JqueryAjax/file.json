@@ -1,0 +1,14 @@
+{
+	 "data" : [
+	 	{
+			"name" : "Narnedra",
+			"age":28,
+			"place" : "EGRP"
+		},
+		{
+			"name" : "Narnedra",
+			"age":28,
+			"place" : "EGRP"
+		}
+	 ] 
+}

@@ -1,0 +1,48 @@
+<html>
+	<head>
+		<title>
+			Demonstrating crossdomain using JSONP
+		</title>
+		<script type="text/javascript" src="../jquery.js"></script>
+	</head>
+	<body>
+		<div>
+			JSONP
+		</div>
+		<div class="block">
+			<ul>
+				<li>
+					Student name is <span id="stdname"></span>
+				</li>
+				<li>
+					Student age is <span id="stdage"></span>
+				</li>
+			</ul>
+			<input type="button" value="Get Data" onclick="getData()"> 
+		</div>
+		<script type="text/javascript">
+			function getData() {
+				var url = 'http://localhost:8080/details/student';
+				$.ajax({
+					url: url,
+					dataType: 'JSON',
+					method: 'GET',
+					success: function(res){
+						console.log("Success");
+						console.log(res);
+						loadData(res);
+					},
+					error: function(err) {
+						console.log("Error");
+						console.log(err);
+					}
+				});
+			}			
+			function loadData(data) {
+				$('#stdname').text(data.name);
+				$('#stdage').text(data.age);
+			}
+		</script>
+
+	</body>
+</html>

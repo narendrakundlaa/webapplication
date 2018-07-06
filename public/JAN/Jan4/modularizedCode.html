@@ -1,0 +1,57 @@
+<html>
+	<head>
+		<title>
+			Creating modularized code.
+		</title>
+	</head>
+	<body>
+		<!-- -->
+		<script type="text/javascript">
+			var ename = "PRasad";
+			var eage = 40;
+			var eGender = 'Male';
+			var  eBasicSal = 10000;
+			var pf = 0;
+			var increment = 0;
+			var hra = 0;
+			function getPfValue() {
+				pf = (12 * eBasicSal )/100;
+			}
+
+			function getHra() {
+				hra = (25 * eBasicSal) / 100;
+			}
+
+			function getTSalAndIncrmnt() {
+				totalSal = eBasicSal + pf + hra;
+
+				if (eGender == 'male') {
+					if (totalSal > 30000) {
+						increment = (20 * totalSal) / 100;
+					} else {
+						increment = (25 * totalSal) / 100;
+					}
+				} else {
+					if (totalSal > 30000) {
+						increment = (25* totalSal) / 100;
+					} else {
+						increment = (30 * totalSal) / 100;
+					}
+				}
+			}
+			function displayDetails() {
+				getPfValue();
+				getHra();
+				getTSalAndIncrmnt();
+				console.log("Employee Details");
+				console.log("Employuee name "  + ename);
+				console.log("Employuee Age "  + eage);
+				console.log("Employuee Gender "  + eGender);
+				console.log("Employuee Total Sal "  + totalSal);
+				console.log("Employuee increment value "  + increment);
+			}
+
+			displayDetails();
+		</script>
+	</body>
+</html>

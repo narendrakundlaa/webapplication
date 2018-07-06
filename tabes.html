@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<title>Tabes</title>
+<style type="text/css">
+	#nare{
+		color: white;
+		display: inline-block;
+	}
+	#Telangana{
+		color: blue;
+	}
+	#AndhraPradesh{
+		color: violet;
+	}
+	#Karnataka{
+		color: green;
+	}
+	.ClickButtons{
+		color: red;
+	}
+</style>
+
+
+<body>
+
+<div class="mainContainer">
+  <h2>Dynamic Tabs</h2>
+  <p >Click on the links to know <b>State capitals</b> if you Want.</p>
+  <p class="ClickButtons">Click</p>
+
+</div>
+
+<div class="Bar">
+  <button class="Chintu Sahasra" onclick="openCity('Telangana')">Telangana</button>
+  <button class="Chintu Sahasra" onclick="openCity('AndhraPradesh')">AndhraPradesh</button>
+  <button class="Chintu Sahasra" onclick="openCity('Karnataka')">Karnataka</button>
+</div>
+
+<div id="Telangana" class="container city">
+  <h2>Telangana</h2>
+  <p>Hyderabad is the capital city of Telangana.</p>
+</div>
+
+<div id="AndhraPradesh" class="container city" style="display:none">
+  <h2>AndhraPradesh</h2>
+  <p>Amaravathi is the capital city of AndhraPradesh.</p> 
+</div>
+
+<div id="Karnataka" class="container city" style="display:none">
+  <h2>Karnataka</h2>
+  <p>Banglore is the capital city of Karnataka.</p>
+</div>
+
+
+<!-- Blinking Text Under here-->
+<h1 id="nare" >Welcome to world mobiles</h1>
+
+<h1>Iphone<sup style= "color:pink; font-size:10px;">New</sup>
+</h1>
+<h2 id="Samsung">Samsung</h2>
+
+
+<script>
+  //instead of Narendra use cityName
+		function openCity(Narenrdra) {
+		    var i;
+		    var x = document.getElementsByClassName("city");
+		    for (i = 0; i < x.length; i++) {
+		       x[i].style.display = "none";  
+		    }
+		    document.getElementById(Narenrdra).style.display = "block";  
+			}
+
+//Blinking Text Begin here
+		var myVar = setInterval(function()
+			{ 
+				setColor() 
+			}, 600);
+
+		function setColor() {
+		  var x = document.querySelector('sup');
+		  x.style.color = x.style.color == "red" ? "white" : "red";			  	
+		  var y = document.querySelector('.ClickButtons');
+		   y.style.color = y.style.color == "green" ? "white" : "green";
+		   var bckgd = document.querySelector('#nare');
+		   bckgd.style.background = bckgd.style.background == "red" ? "white" : "red";
+		}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Http ajax communication</title>
+		<script type="text/javascript" src="angular.js"></script>
+		<script type="text/javascript" src="httpAjax.js"></script>
+		<link rel="stylesheet" type="text/css" href="httpAjax.css">
+	</head>
+	<body>
+		<div ng-app="httpAjax" ng-controller="httpAjaxCntrl">
+			<input type="button" value="Find Product Details" ng-click="ProductInfo()">
+			<div class="error" ng-show="showError">
+				Not connecting server please try later....
+			</div>
+			<div class="loadingMsg" ng-show="showLoading">
+				<img id="loadingImg" src="loading/loading002.gif">
+			</div>
+			<div class="block" style="background: {{color[$index]}}" ng-repeat = "bikes in NewBikes">
+				<ul>
+				<li>
+					Type of Vehicle Name: {{bikes.name}}
+				</li>
+				<li>
+					Type of Vehicle Price: {{bikes.price}}
+				</li>
+				
+				<li>
+					Type of Vehicle color: {{bikes.color}}
+				</li>
+				
+				<li>
+					<img class="bikes" src="{{bikes.image}}"/>
+				</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>

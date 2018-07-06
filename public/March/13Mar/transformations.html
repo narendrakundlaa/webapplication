@@ -1,0 +1,65 @@
+<html>
+	<head>
+		<title>
+			Demonstrating CSS3 Transformations.
+		</title>
+		<script type="text/javascript" src="../../jquery.js"></script>
+		<style type="text/css">
+			.block,.block2 {
+				width: 300px;
+				height: 80px;
+				border: 1px solid;
+				background: #ccc;
+				margin: 50px auto;
+				text-align: center;
+				line-height: 80px;
+				font-size: 30px;
+			}
+			.block2{
+				font-size: 50px;
+				font-style: bold;
+				background: lightblue;
+			}	
+			.block:hover  {
+				/*transform: translate(50px ,30px);*/
+				/*transform: scale(2,3);*/
+			}
+		</style>
+	</head>
+	<body>
+		
+		<div class="block">
+			CONTENT
+		</div>
+		<div class="block2">
+			Narendra
+		</div>
+		<script type="text/javascript">
+			var degree = 0;
+			setInterval(function(){
+				degree += 2;
+				if(degree == 90){
+					$(".block").css("background", "yellow");
+					$(".block2").css("background", "violet");					
+				}
+				else if(degree == 180){
+					$(".block").css("background", "red");
+					$(".block2").css("background", "purple");
+				}
+				else if(degree == 270){
+					$(".block").css("background", "pink");
+					$(".block2").css("background", "wheat");
+				}
+				else if(degree == 360){
+					$(".block").css("background", "green");
+					$(".block2").css("background", "orange");
+					degree =0;
+				}
+				
+				$(".block").css("transform", "rotateX(" + degree + "deg)");
+				$(".block2").css("transform", "rotateY(" + degree + "deg)");
+				
+			}, 100); 
+		</script>
+	</body>
+</html>

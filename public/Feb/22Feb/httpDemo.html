@@ -1,0 +1,94 @@
+<html>
+	<head>
+		<title>
+			Demonstrating repeat and http service
+		</title>
+		<script type="text/javascript" src="angular.js"></script>
+		<script type="text/javascript" src="app.js"></script>
+		<style type="text/css">
+			li {
+				list-style: none;
+				margin: 5px;
+			}
+			.block {
+				border: 1px solid;
+				background: #ccc;
+				margin: 10px;
+				padding: 10px;
+				//border: 1px solid;
+				//width: 500px;
+				//float: left;
+			}
+			input{
+				color: blue;
+				width: 80px;
+				height: 30px;
+				background: yellow;
+				font-weight: 40px;
+			}
+			.left{
+				//border: 1px solid;
+				width: 500px;
+
+			}
+			.showSellerInfo{
+				display: none;
+				float: right;
+				//border: 1px solid;
+				width: 500px;
+				height: 400px;
+				position: absolute;
+				right:100px;
+				top: 30px;
+				background: wheat;
+			}
+		</style>
+	</head>
+	<body>
+		<div ng-app="httpapp" ng-controller="httpappCntrl">
+			<!-- $item is temporary veriable (like for in loop)-->
+			<div class="block" style="background:{{colors[$index]}}" ng-repeat="item in productData">
+				
+				<ul class="left">
+					<li>
+						{{$index + 1}}<!-- $index is predefined to display the serial number-->
+					</li>
+					<li>
+						Product Name : {{item.name}}
+					</li>
+					<li>
+						Product Manu : {{item.manu}}
+					</li>
+					<li>
+						Product Price : {{item.price}}
+					</li>
+					<li>
+						Product seller : {{item.seller}}
+					</li>
+					<li>
+						<img src="{{item.image}}" />
+					</li>
+					<li>
+						Locations Available {{item.locationsAvailable}}
+						<ul>
+							<li ng-repeat="loc in item.locationsAvailable">
+								{{loc}}
+							</li>
+							<input type="button" value="Buy" ng-click="buyProduct()">
+							<input type="button" value="Seller Info" onclick="sellerInfo()">
+						</ul>
+					</li>
+				</ul>
+				<div class="showSellerInfo">
+					<li>Company Name : flipKart</li>
+					<li>Locations : Hyderabad</li>
+					<li>seller id: A001</li>
+
+						
+					</li>
+				</div>
+
+			</div>
+		</div>
+	</body>
+</html>

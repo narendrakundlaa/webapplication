@@ -1,0 +1,64 @@
+<html>
+	<head>
+		<title>
+			Demonstrating Multi controller in a Banking APP
+		</title>
+		<script type="text/javascript" src="../angular.js"></script>
+		<script type="text/javascript" src="app.js"></script>
+		<link rel="stylesheet" type="text/css" href="app.css">
+	</head>
+	<body>
+		<div ng-app="bankApp" ng-controller="mainCntrl">
+			<div class="mainTitle">
+				Welcome to  ABC Bank
+			</div>
+			<div class="block" ng-controller="withDrawCntrl">
+				<div class="sTitle">
+					Withdraw Block
+				</div>
+				<div class="tbalanceBlck">
+					Total Balance: ${{totalBalance}}
+				</div>
+			 	<div class="body">
+			 		Enter the amount to be withdrawn: 
+			 		<input type="number" ng-model="withDrwAmt">
+			 		<input type="button" value="WithDraw" ng-click="doWithDraw()">
+				</div>
+				<div class="succsBlck" ng-show="showWthDrwSucss">
+					Successfly Amount been With Drawn
+				</div>
+			</div>
+
+			<div ng-include="'templates/rdTemplate.htm'"></div>
+
+			<div class="block" ng-controller="FDCntrl">
+				<div class="sTitle">
+					Fixed Deposit Block
+				</div>
+				<div class="tbalanceBlck">
+					Total Balance: ${{totalBalance}}
+				</div>
+			 	<div class="body">
+			 		Enter the amount to be FD: 
+			 		<input type="number" ng-model="fdAmt">
+			 		<input type="button" value="FD" ng-click="doFd()">
+				</div>
+				<div class="succsBlck" ng-show="showfdSucss">
+					Successfly Amount been FDed
+				</div>
+			</div>
+
+			<div class="block" ng-controller="insurenceBlck">
+				<div class="sTitle">
+					Insurence Block
+				</div>
+				<div class="tbalanceBlck">
+					Total Balance: ${{totalBalance}}
+				</div>
+			 	<div class="body">
+			 		{{msg}}
+				</div>				
+			</div>
+		</div>
+	</body>
+</html>

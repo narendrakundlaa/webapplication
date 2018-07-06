@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<title>
+			Demonstrating variable hoisting.
+		</title>
+	</head>
+	<body>
+		<div>
+			Demonstrating variable hoisting.
+		</div>
+		<script type="text/javascript">
+			var a = 40;
+			console.log("a val is " +a);
+			var b;
+			console.log("b val is " +b);
+			console.log("c val is " +c); // returns undefined instead of error.
+			var c = 50;
+		</script>
+
+		
+	</body>
+</html>

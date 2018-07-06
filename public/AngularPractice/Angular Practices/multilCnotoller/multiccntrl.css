@@ -1,0 +1,26 @@
+.main{
+	border: 1px solid;
+	width: 70%;
+	margin:50px auto;
+	background: #ccc;
+	height: 600px;
+	
+
+}
+.body{
+	border: 1px solid;
+	width: 75%;
+	height: 150px;
+	margin: 20px auto;
+	padding: 20px;
+
+}
+
+h3{
+	text-align: center;
+	color: blue;
+	text-decoration: underline;
+}
+.Tbal{
+	text-align: right;
+}

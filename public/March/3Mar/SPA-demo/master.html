@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<title>
+			Demonstrating angular SPA feature
+		</title>
+		<script type="text/javascript" src="../../../angular.js"></script>
+		<script type="text/javascript" src="lib/angularRoute.js"></script>
+		<script type="text/javascript" src="app.js"></script>
+		<link rel="stylesheet" type="text/css" href="app.css">
+	</head>
+	<body>
+		<div ng-app="spaApp" ng-controller="spaCntrl">
+			<div>
+				<header>
+					online shopping appliation
+				</header>
+			</div>
+			<div class="container"> 
+				<div class="leftBlock">
+					Left content<br>
+					<!--instead of using switch case mentioned <a></a> here but for registration page swith case is recomended-->
+					<!--<a href="#!regPage">New Sign up?</a>-->
+				</div>
+					<div class="rightBlock" ng-view> <!--ng-view is fetching all templetes in to the main page-->
+					Right content
+				</div>
+			</div>
+			<div>
+				<footer>
+					@copyrights 2018
+				</footer>
+			</div>
+		</div>
+	</body>
+</html>

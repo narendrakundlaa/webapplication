@@ -1,0 +1,24 @@
+<html>
+	<head>
+		<title>
+			Injecting values dynamically to an object and iterating through an object
+		</title>
+	</head>
+	<body>	
+
+		<script type="text/javascript">
+			var data = {
+				name: 'raj',
+				age: 20,
+				loc: 'hyderabad',
+				gender: 'male'
+			};
+			data.total = 300;
+			for (var temp in data) {
+				console.log("key is " + temp);
+				console.log("value is " + data[temp]);
+			}
+			console.log(data);
+		</script>
+	</body>
+</html>

@@ -1,0 +1,74 @@
+<html>
+	<head>
+		<title>
+			Handling User Defined Exceptions.
+		</title>
+		<style type="text/css">
+			li {
+				list-style: none;
+				margin: 10px;
+			}
+			.errBlck {
+				color: red;
+				margin: 5px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div id="errBlck"></div>
+			<ul>
+				<li>
+					Enter user name <input type="text" id="uname">
+				</li>
+				<li>
+					Enter user Age <input type="text" id="uage">
+				</li>
+				<li>
+					Select Country 
+					<select id="ucountry">
+						<option>India</option>
+						<option>China</option>
+						<option>Japan</option>
+					</select>
+				</li>
+			</ul>
+			<input type="button" value="Submit" onclick="readValues()">
+		</div>
+
+	</body>
+	
+	<script type="text/javascript">
+		function readValues() {
+			var userDetails = {};
+			
+			try {
+				userDetails.name = document.querySelector("#uname").value;
+				userDetails.age = 
+				document.querySelector("#uage").value;	
+				userDetails.age = parseInt(userDetails.age);
+				if (userDetails.name == '') {
+					throw 'nameinvald';
+				}
+				if (userDetails.age < 21 || userDetails.age > 30) {
+					throw 'ageerr';
+				}
+			} catch(err){
+				console.log(err);
+				var msg;
+				switch(err) {
+					case 'ageerr':
+						msg = 'Invalid age';
+						break;
+					case 'nameinvald':
+						msg = "NAme is empty"
+						break;
+				}
+				document.querySelector("#errBlck").innerHTML = msg;
+			}
+			userDetails.cntry = document.querySelector("#ucountry").value;
+			console.log(userDetails);
+
+		}
+	</script>
+</html>

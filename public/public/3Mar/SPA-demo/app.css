@@ -1,0 +1,55 @@
+header, footer, .container {
+	position: absolute;
+	border: 1px solid;
+	width: 99%;
+	text-align: center;
+}
+footer {
+	bottom: 0;
+	background: yellow;
+	clear: both;
+}
+header {
+	font-weight: bolder;
+	padding: 10px;
+	background: yellow;
+}
+
+.container {
+	top: 70px;
+	bottom: 50px;
+	background: #ccc;
+}
+.leftBlock, .rightBlock {
+	float: left;
+	padding: 5px;
+	border: 1px solid;
+	background: #fff;
+	height: 480px;
+}
+.leftBlock {
+	width: 20%;
+}
+.rightBlock {
+	width: 58%;
+}
+
+li {
+	list-style: none;
+	padding: 10px;
+}
+
+.title {
+	text-align: center;
+	font-weight: bolder;
+	font-size: 20px;
+	background: green;
+}
+.link {
+	color: blue;
+	cursor: pointer;
+	margin: 10px;
+}
+.link:hover {
+	text-decoration: underline;
+}

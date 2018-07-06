@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ajax Call</title>
+	<script type="text/javascript" src="jQuery.js"></script>
+	<style type="text/css">
+		.loading, .error{
+			
+			position: absolute;
+			left: 25%;
+			top: 15%;
+			display: none;
+		}
+		.loading{
+			color: green;
+			font-size: 25px;
+		}
+		.error{
+			color: red;
+			font-size: 25px;
+		}
+		.block{
+			width: 150px;
+			border: 1px solid dotted;
+			height: 300px;
+			float: left;
+		}
+		li{
+			list-style: none;
+		}
+	</style>
+</head>
+<body>
+<h1>Ajax Call Method using URL</h1>
+<div class="mainCntr"></div>
+<div class="loading">Loading Please Wait.......</div>
+<div class="error">Error Communication Been Raised....</div>
+<input type="button" value="Movies List" onclick="movies()">
+<script type="text/javascript">
+	function movies(){
+		$('.mainCntr').html('');
+		var urlInfo = 'http://localhost:8080/getMovieslist';
+		document.querySelector('.loading').style.display = 'block';
+		$.ajax({
+			url: urlInfo,
+			method: 'GET',
+			dataType: 'JSON',
+			success: function(response){
+				document.querySelector('.loading').style.display = 'none';
+				var movies  = response.userFiles;
+				showMovies(movies);
+			},
+			error: function(error){
+
+				document.querySelector('.error').style.display = 'block';
+				document.querySelector('.loading').style.display = 'none';
+			}
+		})
+	}
+	function showMovies(movies){
+		for(var i=0; i<movies.length; i++){
+			moviesList(movies[i]);
+		}
+	}
+	function moviesList(lists){
+		var mainCntr = $('<div></div>');
+		var ultag = $('<ul></ul>');
+		var li1 = $('<li></li>').html("Movie " + lists.name);
+		ultag.append(li1);
+		var li2 = $('<li></li>').html('ticket' + lists.ticket);
+		ultag.append(li2);
+		var li3 = $('<li></li>').html('timining ' + lists.time);
+		ultag.append(li3);
+		var li4 = $('<li></li>');
+		var image = $('<img>').attr('src',lists.image);
+		li4.append(image);
+		ultag.append(li4);
+		mainCntr.append(ultag);
+		$('.mainCntr').append(mainCntr);
+	}
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

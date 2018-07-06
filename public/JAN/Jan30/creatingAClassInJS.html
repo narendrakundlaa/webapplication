@@ -1,0 +1,57 @@
+<html>
+	<head>
+		<title>
+			Creating a class and instantiating it.
+		</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function studentDetails(obj){
+				this.name = obj.name;
+				this.age = obj.age;
+				this.location = obj.loc;
+				this.marks = obj.mrks;
+				this.total = 0;
+				this.schoolName = 'ABC Schhol'
+				this.displayData = function() {
+					this.getTotalAndAvg();
+					console.log("name is" + this.name);
+					console.log("Avg is " + this.avg);
+					this.displayGrade();
+				}; 
+				this.getTotalAndAvg = function() {
+					for (var i = 0; i < this.marks.length; i++) {
+						this.total += this.marks[i];
+					}
+					this.avg = this.total/this.marks.length;
+				}
+				this.displayGrade =  function() {
+					if (this.avg > 60) {
+						console.log("PASSED");
+					} else {
+						console.log("FAiled");
+					}
+				}
+			}
+
+			var obj1 = {
+				name: 'raj',
+				age: 20,
+				mrks: [30, 40, 90],
+				loc: 'Hyderabad'
+			}
+			var s1 = new studentDetails(obj1);
+			s1.displayData();
+
+			var obj2 = {
+				name: 'Prasad',
+				age: 40,
+				mrks: [60, 40, 90],
+				loc: 'Delhi'
+			}
+			var s2 = new studentDetails(obj2);
+			s2.displayData();
+		</script>
+		
+	</body>
+</html>

@@ -1,0 +1,55 @@
+<html>
+	<head>
+		<title>
+			Student Details...
+		</title>
+
+	</head>
+	<body>
+		<script type="text/javascript">
+			function getAvg(total) {
+				var avg =  total /3;
+				return avg;
+			}
+
+			function getTotal(m1, m2, m3) {
+				var total = m1 + m2 + m3;
+				return total;
+			}
+
+			function showGrade(avg) {
+				if (avg < 40) {
+					console.log("U have surprise");
+				} else {
+					if (avg >= 90) {
+						console.log("Got Distinction");
+					} else if (avg >= 80) {
+						console.log("first class");
+					} else {
+						console.log("Second class");
+					}
+				}
+			}
+
+			function displayStudentData() {
+				var sname = 'Raj';
+				var sage = 40;
+				var m1 = 50;
+				var m2 = 60;
+				var m3 = 90;
+				var gender = 'Male';
+
+				var total = getTotal(m1, m2, m3);
+				var avg = getAvg(total);
+				showGrade(avg);
+
+				console.log("Student Details");
+				console.log("Student name " + sname);
+				console.log("Student Age " + sage);
+				console.log("STudent total " + total)
+				console.log("Student Average " + avg);
+			}			
+			displayStudentData();			
+		</script>
+	</body>
+</html>
